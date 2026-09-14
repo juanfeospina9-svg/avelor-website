@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
 
@@ -8,7 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   />
 
-  <link rel="icon" type="image/png" href="Isotipo.png">
+  <link rel="icon" type="image/png" href="Isotipo.png" />
 
   <meta
     name="description"
@@ -22,11 +23,16 @@
 
   <meta name="author" content="Avelor" />
 
-  <meta property="og:title" content="Avelor — Growth Intelligence Platform" />
+  <meta
+    property="og:title"
+    content="Avelor — Growth Intelligence Platform"
+  />
+
   <meta
     property="og:description"
     content="Connect conversations, leads, sales, campaigns and business operations in one intelligent workspace."
   />
+
   <meta property="og:type" content="website" />
 
   <title>Avelor — Growth Intelligence Platform</title>
@@ -40,20 +46,37 @@
   />
 
   <style>
+
+    /* =========================
+       DESIGN SYSTEM
+    ========================== */
+
     :root {
       --navy: #163A4D;
       --deep-navy: #0D2938;
+
       --copper: #BA6A2D;
       --copper-light: #D18A54;
+
       --warm-white: #FAFAF8;
       --soft-gray: #F3F5F6;
+
       --text: #18242B;
       --muted: #64727A;
+
       --white: #FFFFFF;
+
       --border: rgba(22, 58, 77, 0.12);
+
       --shadow: 0 20px 60px rgba(13, 41, 56, 0.10);
+
       --radius: 20px;
     }
+
+
+    /* =========================
+       RESET
+    ========================== */
 
     * {
       margin: 0;
@@ -95,6 +118,7 @@
       margin: 0 auto;
     }
 
+
     /* =========================
        NAVIGATION
     ========================== */
@@ -103,16 +127,22 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+
       background: rgba(250, 250, 248, 0.92);
+
       backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
       border-bottom: 1px solid var(--border);
     }
 
     .nav-inner {
       height: 78px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 30px;
     }
 
@@ -130,9 +160,12 @@
     .nav-links {
       display: flex;
       align-items: center;
+
       gap: 34px;
+
       font-size: 14px;
       font-weight: 500;
+
       color: var(--text);
     }
 
@@ -150,25 +183,46 @@
       gap: 16px;
     }
 
+
+    /* =========================
+       LANGUAGE SWITCH
+    ========================== */
+
     .language-switch {
       display: flex;
       align-items: center;
+
       gap: 4px;
       padding: 4px;
+
       border: 1px solid var(--border);
       border-radius: 999px;
+
       background: var(--white);
     }
 
     .language-switch button {
       border: 0;
       background: transparent;
+
       padding: 6px 10px;
+
       border-radius: 999px;
+
       font-size: 12px;
       font-weight: 600;
+
       color: var(--muted);
+
       cursor: pointer;
+
+      transition:
+        color 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .language-switch button:hover {
+      color: var(--navy);
     }
 
     .language-switch button.active {
@@ -178,12 +232,16 @@
 
     .mobile-menu {
       display: none;
+
       border: 0;
       background: transparent;
+
       font-size: 26px;
       color: var(--navy);
+
       cursor: pointer;
     }
+
 
     /* =========================
        BUTTONS
@@ -193,18 +251,26 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+
       gap: 10px;
+
       min-height: 48px;
       padding: 0 22px;
+
       border-radius: 10px;
+
       font-size: 14px;
       font-weight: 600;
+
       border: 1px solid transparent;
+
       cursor: pointer;
+
       transition:
         transform 0.2s ease,
         box-shadow 0.2s ease,
-        background 0.2s ease;
+        background 0.2s ease,
+        border-color 0.2s ease;
     }
 
     .btn:hover {
@@ -214,6 +280,7 @@
     .btn-primary {
       color: var(--white);
       background: var(--navy);
+
       box-shadow: 0 8px 24px rgba(22, 58, 77, 0.16);
     }
 
@@ -224,12 +291,14 @@
     .btn-secondary {
       color: var(--navy);
       background: var(--white);
+
       border-color: rgba(22, 58, 77, 0.20);
     }
 
     .btn-secondary:hover {
       border-color: var(--navy);
     }
+
 
     /* =========================
        HERO
@@ -238,7 +307,9 @@
     .hero {
       position: relative;
       overflow: hidden;
+
       padding: 100px 0 110px;
+
       background:
         radial-gradient(
           circle at 85% 15%,
@@ -255,71 +326,109 @@
 
     .hero::before {
       content: "";
+
       position: absolute;
+
       width: 500px;
       height: 500px;
+
       right: -260px;
       top: -240px;
+
       border: 1px solid rgba(186, 106, 45, 0.20);
+
       border-radius: 50%;
     }
 
     .hero-grid {
       display: grid;
+
       grid-template-columns: 1fr 0.95fr;
+
       align-items: center;
+
       gap: 70px;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
+
       gap: 10px;
+
       color: var(--copper);
+
       font-size: 11px;
       font-weight: 700;
+
       letter-spacing: 0.22em;
       text-transform: uppercase;
+
       margin-bottom: 22px;
     }
 
     .eyebrow::before {
       content: "";
+
       width: 28px;
       height: 2px;
+
       background: var(--copper);
     }
 
     .hero h1 {
       max-width: 680px;
+
       font-size: clamp(48px, 6vw, 78px);
+
       color: var(--navy);
     }
 
-    .hero h1 span {
+    /*
+      HERO COLOR HIERARCHY
+
+      Main concept = Navy
+      Connected/action = Copper
+    */
+
+    .hero h1 .hero-main {
+      color: var(--navy);
+    }
+
+    .hero h1 .hero-accent {
       color: var(--copper);
     }
 
     .hero-description {
       max-width: 610px;
+
       margin-top: 26px;
+
       color: var(--muted);
+
       font-size: 18px;
     }
 
     .hero-actions {
       display: flex;
+
       gap: 14px;
+
       margin-top: 34px;
+
       flex-wrap: wrap;
     }
 
     .hero-tagline {
       margin-top: 30px;
+
       color: var(--navy);
+
       font-family: "Manrope", sans-serif;
+
       font-size: 13px;
       font-weight: 600;
+
       letter-spacing: 0.08em;
     }
 
@@ -327,7 +436,11 @@
       color: var(--copper);
     }
 
-    /* Product visual */
+
+    /* =========================
+       PRODUCT VISUAL
+       KEEPING CURRENT MOCKUP
+    ========================== */
 
     .product-visual {
       position: relative;
@@ -336,28 +449,40 @@
     .product-card {
       position: relative;
       overflow: hidden;
+
       background: var(--white);
+
       border: 1px solid rgba(22, 58, 77, 0.12);
+
       border-radius: 22px;
+
       box-shadow: var(--shadow);
+
       min-height: 430px;
     }
 
     .product-topbar {
       height: 62px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       padding: 0 22px;
+
       border-bottom: 1px solid var(--border);
     }
 
     .product-brand {
       display: flex;
       align-items: center;
+
       gap: 10px;
+
       color: var(--navy);
+
       font-family: "Manrope", sans-serif;
+
       font-weight: 800;
       font-size: 14px;
     }
@@ -365,11 +490,16 @@
     .product-brand-mark {
       width: 28px;
       height: 28px;
+
       display: grid;
       place-items: center;
+
       color: var(--white);
+
       background: var(--navy);
+
       border-radius: 8px;
+
       font-size: 13px;
     }
 
@@ -380,28 +510,38 @@
 
     .product-body {
       display: grid;
+
       grid-template-columns: 145px 1fr;
+
       min-height: 368px;
     }
 
     .product-sidebar {
       padding: 24px 16px;
+
       background: var(--deep-navy);
+
       color: rgba(255, 255, 255, 0.75);
     }
 
     .sidebar-title {
       color: var(--white);
+
       font-family: "Manrope", sans-serif;
+
       font-weight: 800;
       font-size: 13px;
+
       margin-bottom: 24px;
     }
 
     .sidebar-item {
       padding: 9px 10px;
+
       margin-bottom: 5px;
+
       border-radius: 7px;
+
       font-size: 11px;
     }
 
@@ -412,33 +552,44 @@
 
     .product-content {
       padding: 24px;
+
       background: #FCFDFC;
     }
 
     .dashboard-title {
       font-family: "Manrope", sans-serif;
+
       color: var(--navy);
+
       font-weight: 800;
       font-size: 20px;
     }
 
     .dashboard-subtitle {
       color: var(--muted);
+
       font-size: 11px;
+
       margin-top: 3px;
     }
 
     .metric-grid {
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
+
       gap: 9px;
+
       margin-top: 20px;
     }
 
     .metric {
       padding: 13px 10px;
+
       background: var(--white);
+
       border: 1px solid var(--border);
+
       border-radius: 10px;
     }
 
@@ -449,38 +600,53 @@
 
     .metric-value {
       margin-top: 4px;
+
       color: var(--navy);
+
       font-family: "Manrope", sans-serif;
+
       font-size: 15px;
       font-weight: 800;
     }
 
     .dashboard-panels {
       display: grid;
+
       grid-template-columns: 1.4fr 0.8fr;
+
       gap: 10px;
+
       margin-top: 10px;
     }
 
     .dashboard-panel {
       min-height: 180px;
+
       padding: 17px;
+
       background: var(--white);
+
       border: 1px solid var(--border);
+
       border-radius: 12px;
     }
 
     .panel-title {
       color: var(--navy);
+
       font-size: 11px;
       font-weight: 700;
     }
 
     .chart {
       position: relative;
+
       height: 105px;
+
       margin-top: 15px;
+
       border-bottom: 1px solid rgba(22, 58, 77, 0.10);
+
       background:
         repeating-linear-gradient(
           to bottom,
@@ -492,12 +658,18 @@
 
     .chart-line {
       position: absolute;
+
       left: 3%;
       right: 3%;
+
       bottom: 24px;
+
       height: 55px;
+
       border-top: 2px solid var(--copper);
+
       border-radius: 50%;
+
       transform: rotate(-4deg);
     }
 
@@ -507,29 +679,41 @@
 
     .channel-row {
       display: flex;
+
       justify-content: space-between;
+
       gap: 12px;
+
       margin-bottom: 12px;
+
       color: var(--muted);
+
       font-size: 10px;
     }
 
     .channel-bar {
       height: 5px;
+
       margin-top: 4px;
+
       border-radius: 999px;
+
       background: var(--soft-gray);
+
       overflow: hidden;
     }
 
     .channel-fill {
       height: 100%;
+
       border-radius: inherit;
+
       background: var(--navy);
     }
 
+
     /* =========================
-       PLATFORM
+       GENERAL SECTIONS
     ========================== */
 
     .section {
@@ -546,7 +730,9 @@
 
     .section-heading {
       max-width: 760px;
+
       margin: 0 auto 52px;
+
       text-align: center;
     }
 
@@ -556,26 +742,40 @@
 
     .section-heading h2 {
       color: var(--navy);
+
       font-size: clamp(36px, 4vw, 54px);
     }
 
     .section-heading p {
       margin-top: 18px;
+
       color: var(--muted);
+
       font-size: 16px;
     }
 
+
+    /* =========================
+       PLATFORM
+    ========================== */
+
     .feature-grid {
       display: grid;
+
       grid-template-columns: repeat(3, 1fr);
+
       gap: 18px;
     }
 
     .feature-card {
       padding: 30px;
+
       background: var(--white);
+
       border: 1px solid var(--border);
+
       border-radius: var(--radius);
+
       transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
@@ -583,37 +783,61 @@
 
     .feature-card:hover {
       transform: translateY(-5px);
+
       box-shadow: var(--shadow);
     }
 
     .feature-icon {
       width: 46px;
       height: 46px;
+
       display: grid;
       place-items: center;
+
       margin-bottom: 24px;
+
       color: var(--white);
+
       background: var(--navy);
+
       border-radius: 12px;
+
       font-family: "Manrope", sans-serif;
+
       font-weight: 800;
     }
 
+    /*
+      PLATFORM COLOR RHYTHM
+
+      01 Navy
+      02 Copper
+      03 Navy
+      04 Copper
+      05 Navy
+      06 Copper
+    */
+
     .feature-card:nth-child(2) .feature-icon,
-    .feature-card:nth-child(4) .feature-icon {
+    .feature-card:nth-child(4) .feature-icon,
+    .feature-card:nth-child(6) .feature-icon {
       background: var(--copper);
     }
 
     .feature-card h3 {
       color: var(--navy);
+
       font-size: 21px;
     }
 
     .feature-card p {
       margin-top: 10px;
+
       color: var(--muted);
+
       font-size: 14px;
     }
+
 
     /* =========================
        WORKFLOW
@@ -621,71 +845,99 @@
 
     .workflow-grid {
       display: grid;
+
       grid-template-columns: 0.8fr 1.2fr;
+
       align-items: center;
+
       gap: 80px;
     }
 
     .workflow-copy h2 {
       color: var(--navy);
+
       font-size: clamp(38px, 4vw, 55px);
     }
 
     .workflow-copy p {
       max-width: 500px;
+
       margin-top: 20px;
+
       color: var(--muted);
+
       font-size: 16px;
     }
 
     .workflow {
       display: flex;
+
       align-items: center;
       justify-content: space-between;
+
       gap: 10px;
     }
 
     .workflow-step {
       flex: 1;
+
       text-align: center;
     }
+
+    /*
+      WORKFLOW
+
+      All process nodes are copper.
+      Text remains navy / muted.
+      This makes the flow visually clearer.
+    */
 
     .workflow-circle {
       width: 68px;
       height: 68px;
+
       margin: 0 auto 14px;
+
       display: grid;
       place-items: center;
+
       border-radius: 50%;
+
       color: var(--white);
-      background: var(--navy);
+
+      background: var(--copper);
+
       font-family: "Manrope", sans-serif;
+
       font-weight: 800;
       font-size: 13px;
-    }
 
-    .workflow-step:nth-child(2) .workflow-circle,
-    .workflow-step:nth-child(4) .workflow-circle {
-      background: var(--copper);
+      box-shadow: 0 8px 20px rgba(186, 106, 45, 0.12);
     }
 
     .workflow-step h4 {
       color: var(--navy);
+
       font-size: 13px;
+
       letter-spacing: -0.01em;
     }
 
     .workflow-step p {
       margin-top: 5px;
+
       color: var(--muted);
+
       font-size: 10px;
     }
 
     .workflow-arrow {
       color: var(--copper);
+
       font-size: 22px;
       font-weight: 700;
     }
+
 
     /* =========================
        ABOUT
@@ -693,47 +945,72 @@
 
     .about-grid {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
+
       align-items: center;
+
       gap: 80px;
     }
 
     .about-copy h2 {
       color: var(--navy);
+
       font-size: clamp(38px, 4vw, 54px);
+    }
+
+    /*
+      About heading:
+      main statement = Navy
+      final growth concept = Copper
+    */
+
+    .about-copy h2 .about-accent {
+      color: var(--copper);
     }
 
     .about-copy p {
       margin-top: 20px;
+
       color: var(--muted);
+
       font-size: 16px;
     }
 
     .about-panel {
       position: relative;
+
       min-height: 390px;
+
       overflow: hidden;
+
       border-radius: 24px;
+
       background:
         linear-gradient(
           135deg,
           var(--deep-navy),
           var(--navy)
         );
+
       box-shadow: var(--shadow);
     }
 
     .about-panel::before,
     .about-panel::after {
       content: "";
+
       position: absolute;
+
       border-radius: 50%;
+
       border: 1px solid rgba(255, 255, 255, 0.14);
     }
 
     .about-panel::before {
       width: 480px;
       height: 480px;
+
       top: -200px;
       right: -180px;
     }
@@ -741,42 +1018,60 @@
     .about-panel::after {
       width: 280px;
       height: 280px;
+
       bottom: -120px;
       left: -100px;
     }
 
     .about-content {
       position: relative;
+
       z-index: 1;
+
       height: 100%;
+
       min-height: 390px;
+
       padding: 50px;
+
       display: flex;
+
       flex-direction: column;
+
       justify-content: flex-end;
     }
 
     .about-label {
       color: var(--copper-light);
+
       font-size: 11px;
       font-weight: 700;
+
       letter-spacing: 0.20em;
+
       text-transform: uppercase;
     }
 
     .about-content h3 {
       max-width: 390px;
+
       margin-top: 12px;
+
       color: var(--white);
+
       font-size: 38px;
     }
 
     .about-content p {
       max-width: 390px;
+
       margin-top: 15px;
+
       color: rgba(255, 255, 255, 0.70);
+
       font-size: 14px;
     }
+
 
     /* =========================
        CONTACT
@@ -784,14 +1079,19 @@
 
     .contact {
       padding: 75px 0;
+
       color: var(--white);
+
       background: var(--deep-navy);
     }
 
     .contact-grid {
       display: grid;
+
       grid-template-columns: 1.2fr 0.8fr;
+
       align-items: center;
+
       gap: 60px;
     }
 
@@ -801,30 +1101,50 @@
 
     .contact p {
       max-width: 610px;
+
       margin-top: 15px;
+
       color: rgba(255, 255, 255, 0.68);
+
       font-size: 16px;
     }
 
     .contact-info {
       display: grid;
+
       gap: 13px;
+
       padding-left: 40px;
+
       border-left: 1px solid rgba(255, 255, 255, 0.16);
     }
 
     .contact-item {
       color: rgba(255, 255, 255, 0.82);
+
       font-size: 14px;
     }
 
     .contact-item strong {
       display: block;
+
       margin-bottom: 2px;
+
       color: var(--copper-light);
+
       font-size: 10px;
+
       letter-spacing: 0.12em;
+
       text-transform: uppercase;
+    }
+
+    .contact-item a {
+      transition: color 0.2s ease;
+    }
+
+    .contact-item a:hover {
+      color: var(--copper-light);
     }
 
     .contact-action {
@@ -833,8 +1153,14 @@
 
     .contact-action .btn {
       color: var(--navy);
+
       background: var(--white);
     }
+
+    .contact-action .btn:hover {
+      background: #f4f4f1;
+    }
+
 
     /* =========================
        FOOTER
@@ -842,14 +1168,18 @@
 
     footer {
       padding: 45px 0 30px;
+
       background: var(--white);
+
       border-top: 1px solid var(--border);
     }
 
     .footer-top {
       display: flex;
+
       align-items: flex-start;
       justify-content: space-between;
+
       gap: 40px;
     }
 
@@ -859,19 +1189,31 @@
 
     .footer-tagline {
       margin-top: 9px;
+
       color: var(--muted);
+
       font-family: "Manrope", sans-serif;
+
       font-size: 11px;
       font-weight: 600;
+
       letter-spacing: 0.08em;
     }
 
     .footer-links {
       display: flex;
+
       gap: 28px;
+
       flex-wrap: wrap;
+
       font-size: 13px;
+
       color: var(--muted);
+    }
+
+    .footer-links a {
+      transition: color 0.2s ease;
     }
 
     .footer-links a:hover {
@@ -880,20 +1222,29 @@
 
     .footer-bottom {
       display: flex;
+
       justify-content: space-between;
+
       gap: 30px;
+
       margin-top: 45px;
+
       padding-top: 20px;
+
       border-top: 1px solid var(--border);
+
       color: var(--muted);
+
       font-size: 11px;
     }
+
 
     /* =========================
        MOBILE
     ========================== */
 
     @media (max-width: 950px) {
+
       .nav-links,
       .nav-actions .btn {
         display: none;
@@ -928,13 +1279,18 @@
 
       .contact-info {
         padding-left: 0;
+
         padding-top: 25px;
+
         border-left: 0;
+
         border-top: 1px solid rgba(255, 255, 255, 0.16);
       }
     }
 
+
     @media (max-width: 650px) {
+
       .container {
         width: min(100% - 28px, 1180px);
       }
@@ -986,7 +1342,9 @@
 
       .workflow {
         display: grid;
+
         grid-template-columns: 1fr 1fr;
+
         gap: 25px;
       }
 
@@ -1013,10 +1371,16 @@
       }
     }
 
-    /* Mobile navigation opened */
+
+    /* =========================
+       MOBILE NAVIGATION
+    ========================== */
+
     .mobile-nav {
       display: none;
+
       padding: 16px 0 22px;
+
       border-top: 1px solid var(--border);
     }
 
@@ -1026,12 +1390,21 @@
 
     .mobile-nav a {
       display: block;
+
       padding: 11px 0;
+
       font-size: 14px;
+
       color: var(--text);
     }
+
+    .mobile-nav a:hover {
+      color: var(--copper);
+    }
+
   </style>
 </head>
+
 
 <body>
 
@@ -1040,25 +1413,89 @@
   ========================== -->
 
   <header class="navbar">
+
     <div class="container nav-inner">
 
-      <a href="#top" class="brand">
-        <img src="Logo.png" alt="Avelor logo" />
+      <a
+        href="#top"
+        class="brand"
+        aria-label="Avelor home"
+      >
+        <img
+          src="Logo.png"
+          alt="Avelor logo"
+        />
       </a>
 
-      <nav class="nav-links">
-        <a href="#platform" data-en="Platform" data-es="Plataforma">Platform</a>
-        <a href="#solutions" data-en="Solutions" data-es="Soluciones">Solutions</a>
-        <a href="#about" data-en="About" data-es="Nosotros">About</a>
-        <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+
+      <nav
+        class="nav-links"
+        aria-label="Main navigation"
+      >
+
+        <a
+          href="#platform"
+          data-en="Platform"
+          data-es="Plataforma"
+        >
+          Platform
+        </a>
+
+        <a
+          href="#solutions"
+          data-en="Solutions"
+          data-es="Soluciones"
+        >
+          Solutions
+        </a>
+
+        <a
+          href="#about"
+          data-en="About"
+          data-es="Nosotros"
+        >
+          About
+        </a>
+
+        <a
+          href="#contact"
+          data-en="Contact"
+          data-es="Contacto"
+        >
+          Contact
+        </a>
+
       </nav>
+
 
       <div class="nav-actions">
 
-        <div class="language-switch">
-          <button id="enBtn" class="active">EN</button>
-          <button id="esBtn">ES</button>
+        <div
+          class="language-switch"
+          aria-label="Language selection"
+        >
+
+          <button
+            id="enBtn"
+            class="active"
+            type="button"
+            aria-label="English"
+            aria-pressed="true"
+          >
+            EN
+          </button>
+
+          <button
+            id="esBtn"
+            type="button"
+            aria-label="Español"
+            aria-pressed="false"
+          >
+            ES
+          </button>
+
         </div>
+
 
         <a
           href="#contact"
@@ -1069,7 +1506,15 @@
           Get in touch →
         </a>
 
-        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">
+
+        <button
+          class="mobile-menu"
+          id="mobileMenu"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+        >
           ☰
         </button>
 
@@ -1077,25 +1522,66 @@
 
     </div>
 
+
     <div class="container">
-      <nav class="mobile-nav" id="mobileNav">
-        <a href="#platform" data-en="Platform" data-es="Plataforma">Platform</a>
-        <a href="#solutions" data-en="Solutions" data-es="Soluciones">Solutions</a>
-        <a href="#about" data-en="About" data-es="Nosotros">About</a>
-        <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+
+      <nav
+        class="mobile-nav"
+        id="mobileNav"
+        aria-label="Mobile navigation"
+      >
+
+        <a
+          href="#platform"
+          data-en="Platform"
+          data-es="Plataforma"
+        >
+          Platform
+        </a>
+
+        <a
+          href="#solutions"
+          data-en="Solutions"
+          data-es="Soluciones"
+        >
+          Solutions
+        </a>
+
+        <a
+          href="#about"
+          data-en="About"
+          data-es="Nosotros"
+        >
+          About
+        </a>
+
+        <a
+          href="#contact"
+          data-en="Contact"
+          data-es="Contacto"
+        >
+          Contact
+        </a>
+
       </nav>
+
     </div>
+
   </header>
 
 
+
   <main id="top">
+
 
     <!-- =========================
          HERO
     ========================== -->
 
     <section class="hero">
+
       <div class="container hero-grid">
+
 
         <div>
 
@@ -1107,15 +1593,29 @@
             Growth Intelligence Platform
           </div>
 
+
           <h1>
-            <span data-en="Growth Intelligence," data-es="Inteligencia de crecimiento,">
+
+            <span
+              class="hero-main"
+              data-en="Growth Intelligence,"
+              data-es="Inteligencia de crecimiento,"
+            >
               Growth Intelligence,
             </span>
+
             <br />
-            <span data-en="connected." data-es="conectada.">
+
+            <span
+              class="hero-accent"
+              data-en="connected."
+              data-es="conectada."
+            >
               connected.
             </span>
+
           </h1>
+
 
           <p
             class="hero-description"
@@ -1124,6 +1624,7 @@
           >
             Avelor brings conversations, leads, sales, campaigns and business operations together in one intelligent workspace.
           </p>
+
 
           <div class="hero-actions">
 
@@ -1136,6 +1637,7 @@
               Get in touch →
             </a>
 
+
             <a
               href="#platform"
               class="btn btn-secondary"
@@ -1146,6 +1648,7 @@
             </a>
 
           </div>
+
 
           <div
             class="hero-tagline"
@@ -1158,17 +1661,29 @@
         </div>
 
 
-        <!-- Product visual -->
+
+        <!-- =========================
+             CURRENT PRODUCT MOCKUP
+             KEEPING FOR NOW
+        ========================== -->
+
         <div class="product-visual">
 
           <div class="product-card">
 
+
             <div class="product-topbar">
 
               <div class="product-brand">
-                <div class="product-brand-mark">A</div>
+
+                <div class="product-brand-mark">
+                  A
+                </div>
+
                 AVELOR
+
               </div>
+
 
               <div
                 class="product-status"
@@ -1181,24 +1696,50 @@
             </div>
 
 
+
             <div class="product-body">
+
 
               <aside class="product-sidebar">
 
-                <div class="sidebar-title">AVELOR</div>
+                <div class="sidebar-title">
+                  AVELOR
+                </div>
 
-                <div class="sidebar-item active">Overview</div>
-                <div class="sidebar-item">Conversations</div>
-                <div class="sidebar-item">Leads</div>
-                <div class="sidebar-item">Sales</div>
-                <div class="sidebar-item">Campaigns</div>
-                <div class="sidebar-item">Tasks</div>
-                <div class="sidebar-item">Insights</div>
+                <div class="sidebar-item active">
+                  Overview
+                </div>
+
+                <div class="sidebar-item">
+                  Conversations
+                </div>
+
+                <div class="sidebar-item">
+                  Leads
+                </div>
+
+                <div class="sidebar-item">
+                  Sales
+                </div>
+
+                <div class="sidebar-item">
+                  Campaigns
+                </div>
+
+                <div class="sidebar-item">
+                  Tasks
+                </div>
+
+                <div class="sidebar-item">
+                  Insights
+                </div>
 
               </aside>
 
 
+
               <div class="product-content">
+
 
                 <div
                   class="dashboard-title"
@@ -1207,6 +1748,7 @@
                 >
                   Your business, connected.
                 </div>
+
 
                 <div
                   class="dashboard-subtitle"
@@ -1217,32 +1759,67 @@
                 </div>
 
 
+
                 <div class="metric-grid">
 
-                  <div class="metric">
-                    <div class="metric-label">Conversations</div>
-                    <div class="metric-value">—</div>
-                  </div>
 
                   <div class="metric">
-                    <div class="metric-label">Leads</div>
-                    <div class="metric-value">—</div>
+
+                    <div class="metric-label">
+                      Conversations
+                    </div>
+
+                    <div class="metric-value">
+                      —
+                    </div>
+
                   </div>
 
-                  <div class="metric">
-                    <div class="metric-label">Sales</div>
-                    <div class="metric-value">—</div>
-                  </div>
 
                   <div class="metric">
-                    <div class="metric-label">Campaigns</div>
-                    <div class="metric-value">—</div>
+
+                    <div class="metric-label">
+                      Leads
+                    </div>
+
+                    <div class="metric-value">
+                      —
+                    </div>
+
+                  </div>
+
+
+                  <div class="metric">
+
+                    <div class="metric-label">
+                      Sales
+                    </div>
+
+                    <div class="metric-value">
+                      —
+                    </div>
+
+                  </div>
+
+
+                  <div class="metric">
+
+                    <div class="metric-label">
+                      Campaigns
+                    </div>
+
+                    <div class="metric-value">
+                      —
+                    </div>
+
                   </div>
 
                 </div>
 
 
+
                 <div class="dashboard-panels">
+
 
                   <div class="dashboard-panel">
 
@@ -1254,11 +1831,15 @@
                       Growth overview
                     </div>
 
+
                     <div class="chart">
+
                       <div class="chart-line"></div>
+
                     </div>
 
                   </div>
+
 
 
                   <div class="dashboard-panel">
@@ -1271,33 +1852,78 @@
                       Connected channels
                     </div>
 
+
                     <div class="channel">
 
-                      <div class="channel-row">
-                        <span>Conversations</span>
-                        <span>—</span>
-                      </div>
-
-                      <div class="channel-bar">
-                        <div class="channel-fill" style="width: 72%;"></div>
-                      </div>
 
                       <div class="channel-row">
-                        <span>Sales</span>
-                        <span>—</span>
+
+                        <span>
+                          Conversations
+                        </span>
+
+                        <span>
+                          —
+                        </span>
+
                       </div>
 
+
                       <div class="channel-bar">
-                        <div class="channel-fill" style="width: 54%;"></div>
+
+                        <div
+                          class="channel-fill"
+                          style="width: 72%;"
+                        ></div>
+
                       </div>
+
+
 
                       <div class="channel-row">
-                        <span>Campaigns</span>
-                        <span>—</span>
+
+                        <span>
+                          Sales
+                        </span>
+
+                        <span>
+                          —
+                        </span>
+
                       </div>
 
+
                       <div class="channel-bar">
-                        <div class="channel-fill" style="width: 42%;"></div>
+
+                        <div
+                          class="channel-fill"
+                          style="width: 54%;"
+                        ></div>
+
+                      </div>
+
+
+
+                      <div class="channel-row">
+
+                        <span>
+                          Campaigns
+                        </span>
+
+                        <span>
+                          —
+                        </span>
+
+                      </div>
+
+
+                      <div class="channel-bar">
+
+                        <div
+                          class="channel-fill"
+                          style="width: 42%;"
+                        ></div>
+
                       </div>
 
                     </div>
@@ -1315,18 +1941,25 @@
         </div>
 
       </div>
+
     </section>
+
 
 
     <!-- =========================
          PLATFORM
     ========================== -->
 
-    <section class="section section-light" id="platform">
+    <section
+      class="section section-light"
+      id="platform"
+    >
 
       <div class="container">
 
+
         <div class="section-heading">
+
 
           <div
             class="eyebrow"
@@ -1336,12 +1969,14 @@
             Platform
           </div>
 
+
           <h2
             data-en="One connected system for growth."
             data-es="Un sistema conectado para crecer."
           >
             One connected system for growth.
           </h2>
+
 
           <p
             data-en="Everything you need to manage conversations, customers, sales and campaigns in one place."
@@ -1353,11 +1988,18 @@
         </div>
 
 
-        <div class="feature-grid" id="solutions">
+
+        <div
+          class="feature-grid"
+          id="solutions"
+        >
+
 
           <article class="feature-card">
 
-            <div class="feature-icon">01</div>
+            <div class="feature-icon">
+              01
+            </div>
 
             <h3
               data-en="Conversations"
@@ -1376,9 +2018,12 @@
           </article>
 
 
+
           <article class="feature-card">
 
-            <div class="feature-icon">02</div>
+            <div class="feature-icon">
+              02
+            </div>
 
             <h3
               data-en="Leads"
@@ -1397,9 +2042,12 @@
           </article>
 
 
+
           <article class="feature-card">
 
-            <div class="feature-icon">03</div>
+            <div class="feature-icon">
+              03
+            </div>
 
             <h3
               data-en="Sales"
@@ -1418,9 +2066,12 @@
           </article>
 
 
+
           <article class="feature-card">
 
-            <div class="feature-icon">04</div>
+            <div class="feature-icon">
+              04
+            </div>
 
             <h3
               data-en="Campaigns"
@@ -1439,9 +2090,12 @@
           </article>
 
 
+
           <article class="feature-card">
 
-            <div class="feature-icon">05</div>
+            <div class="feature-icon">
+              05
+            </div>
 
             <h3
               data-en="Tasks"
@@ -1460,9 +2114,12 @@
           </article>
 
 
+
           <article class="feature-card">
 
-            <div class="feature-icon">06</div>
+            <div class="feature-icon">
+              06
+            </div>
 
             <h3
               data-en="Intelligence"
@@ -1487,6 +2144,7 @@
     </section>
 
 
+
     <!-- =========================
          WORKFLOW
     ========================== -->
@@ -1495,7 +2153,9 @@
 
       <div class="container workflow-grid">
 
+
         <div class="workflow-copy">
+
 
           <div
             class="eyebrow"
@@ -1505,12 +2165,14 @@
             How it works
           </div>
 
+
           <h2
             data-en="Turn daily activity into real growth."
             data-es="Convierte la actividad diaria en crecimiento real."
           >
             Turn daily activity into real growth.
           </h2>
+
 
           <p
             data-en="Avelor connects the dots between conversations, leads, sales and campaigns, so businesses can focus on what really matters: growing."
@@ -1522,11 +2184,15 @@
         </div>
 
 
+
         <div class="workflow">
+
 
           <div class="workflow-step">
 
-            <div class="workflow-circle">01</div>
+            <div class="workflow-circle">
+              01
+            </div>
 
             <h4
               data-en="Conversations"
@@ -1545,12 +2211,16 @@
           </div>
 
 
-          <div class="workflow-arrow">→</div>
+          <div class="workflow-arrow">
+            →
+          </div>
 
 
           <div class="workflow-step">
 
-            <div class="workflow-circle">02</div>
+            <div class="workflow-circle">
+              02
+            </div>
 
             <h4
               data-en="Leads"
@@ -1569,12 +2239,16 @@
           </div>
 
 
-          <div class="workflow-arrow">→</div>
+          <div class="workflow-arrow">
+            →
+          </div>
 
 
           <div class="workflow-step">
 
-            <div class="workflow-circle">03</div>
+            <div class="workflow-circle">
+              03
+            </div>
 
             <h4
               data-en="Sales"
@@ -1593,12 +2267,16 @@
           </div>
 
 
-          <div class="workflow-arrow">→</div>
+          <div class="workflow-arrow">
+            →
+          </div>
 
 
           <div class="workflow-step">
 
-            <div class="workflow-circle">04</div>
+            <div class="workflow-circle">
+              04
+            </div>
 
             <h4
               data-en="Campaigns"
@@ -1617,12 +2295,16 @@
           </div>
 
 
-          <div class="workflow-arrow">→</div>
+          <div class="workflow-arrow">
+            →
+          </div>
 
 
           <div class="workflow-step">
 
-            <div class="workflow-circle">05</div>
+            <div class="workflow-circle">
+              05
+            </div>
 
             <h4
               data-en="Insights"
@@ -1647,92 +2329,123 @@
     </section>
 
 
-   <!-- =========================
-     ABOUT
-========================== -->
 
-<section class="section section-light" id="about">
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
-  <div class="container about-grid">
+    <section
+      class="section section-light"
+      id="about"
+    >
 
-    <div class="about-copy">
-
-      <div
-        class="eyebrow"
-        data-en="About Avelor"
-        data-es="Sobre Avelor"
-      >
-        About Avelor
-      </div>
-
-      <h2
-        data-en="Technology built to connect growth."
-        data-es="Tecnología construida para conectar el crecimiento."
-      >
-        Technology built to connect growth.
-      </h2>
-
-      <p
-        data-en="Avelor is a growth technology platform that brings conversations, leads, sales, campaigns and business operations together in one intelligent workspace."
-        data-es="Avelor es una plataforma de tecnología para el crecimiento que conecta conversaciones, leads, ventas, campañas y operaciones comerciales en un solo espacio de trabajo inteligente."
-      >
-        Avelor is a growth technology platform that brings conversations, leads, sales, campaigns and business operations together in one intelligent workspace.
-      </p>
-
-      <p
-        data-en="Avelor is operated from Colombia by Juan Felipe Ospina Duque, with a focus on building practical digital systems for growing businesses."
-        data-es="Avelor opera desde Colombia bajo la dirección de Juan Felipe Ospina Duque, con un enfoque en construir sistemas digitales prácticos para negocios en crecimiento."
-      >
-        Avelor is operated from Colombia by Juan Felipe Ospina Duque, with a focus on building practical digital systems for growing businesses.
-      </p>
-
-    </div>
+      <div class="container about-grid">
 
 
-    <div class="about-panel">
+        <div class="about-copy">
 
-      <div class="about-content">
 
-        <div
-          class="about-label"
-          data-en="Growth Intelligence Platform"
-          data-es="Plataforma de Inteligencia de Crecimiento"
-        >
-          Growth Intelligence Platform
+          <div
+            class="eyebrow"
+            data-en="About Avelor"
+            data-es="Sobre Avelor"
+          >
+            About Avelor
+          </div>
+
+
+          <h2>
+
+            <span
+              data-en="Technology built to connect the"
+              data-es="Tecnología construida para conectar el"
+            >
+              Technology built to connect the
+            </span>
+
+            <span
+              class="about-accent"
+              data-en=" growth."
+              data-es=" crecimiento."
+            >
+              growth.
+            </span>
+
+          </h2>
+
+
+          <p
+            data-en="Avelor is a growth technology platform that brings conversations, leads, sales, campaigns and business operations together in one intelligent workspace."
+            data-es="Avelor es una plataforma de tecnología para el crecimiento que conecta conversaciones, leads, ventas, campañas y operaciones comerciales en un solo espacio de trabajo inteligente."
+          >
+            Avelor is a growth technology platform that brings conversations, leads, sales, campaigns and business operations together in one intelligent workspace.
+          </p>
+
+
+          <p
+            data-en="Avelor is operated from Colombia by Juan Felipe Ospina Duque, with a focus on building practical digital systems for growing businesses."
+            data-es="Avelor opera desde Colombia bajo la dirección de Juan Felipe Ospina Duque, con un enfoque en construir sistemas digitales prácticos para negocios en crecimiento."
+          >
+            Avelor is operated from Colombia by Juan Felipe Ospina Duque, with a focus on building practical digital systems for growing businesses.
+          </p>
+
         </div>
 
-        <h3
-          data-en="Conversations. Customers. Sales. Connected."
-          data-es="Conversaciones. Clientes. Ventas. Conectados."
-        >
-          Conversations. Customers. Sales. Connected.
-        </h3>
 
-        <p
-          data-en="Avelor brings the essential pieces of business growth into one connected system, helping businesses organize activity and move with greater clarity."
-          data-es="Avelor reúne las piezas esenciales del crecimiento empresarial en un sistema conectado, ayudando a los negocios a organizar su actividad y avanzar con mayor claridad."
-        >
-          Avelor brings the essential pieces of business growth into one connected system, helping businesses organize activity and move with greater clarity.
-        </p>
+
+        <div class="about-panel">
+
+          <div class="about-content">
+
+
+            <div
+              class="about-label"
+              data-en="Growth Intelligence Platform"
+              data-es="Plataforma de Inteligencia de Crecimiento"
+            >
+              Growth Intelligence Platform
+            </div>
+
+
+            <h3
+              data-en="Conversations. Customers. Sales. Connected."
+              data-es="Conversaciones. Clientes. Ventas. Conectados."
+            >
+              Conversations. Customers. Sales. Connected.
+            </h3>
+
+
+            <p
+              data-en="Avelor brings the essential pieces of business growth into one connected system, helping businesses organize activity and move with greater clarity."
+              data-es="Avelor reúne las piezas esenciales del crecimiento empresarial en un sistema conectado, ayudando a los negocios a organizar su actividad y avanzar con mayor claridad."
+            >
+              Avelor brings the essential pieces of business growth into one connected system, helping businesses organize activity and move with greater clarity.
+            </p>
+
+          </div>
+
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </div>
-
-</section>
 
 
     <!-- =========================
          CONTACT
     ========================== -->
 
-    <section class="contact" id="contact">
+    <section
+      class="contact"
+      id="contact"
+    >
 
       <div class="container contact-grid">
 
+
         <div>
+
 
           <div
             class="eyebrow"
@@ -1742,6 +2455,7 @@
             Let's talk
           </div>
 
+
           <h2
             data-en="Ready to explore Avelor?"
             data-es="¿Listo para conocer Avelor?"
@@ -1749,12 +2463,14 @@
             Ready to explore Avelor?
           </h2>
 
+
           <p
             data-en="Let's talk about how Avelor can help you connect your business and unlock new growth."
             data-es="Hablemos sobre cómo Avelor puede ayudarte a conectar tu negocio y desbloquear nuevas oportunidades de crecimiento."
           >
             Let's talk about how Avelor can help you connect your business and unlock new growth.
           </p>
+
 
           <div class="contact-action">
 
@@ -1772,25 +2488,44 @@
         </div>
 
 
+
         <div class="contact-info">
 
+
           <div class="contact-item">
-            <strong>Email</strong>
+
+            <strong>
+              Email
+            </strong>
+
             <a href="mailto:studioavelor@gmail.com">
               studioavelor@gmail.com
             </a>
+
           </div>
 
+
           <div class="contact-item">
-            <strong>Phone</strong>
+
+            <strong>
+              Phone
+            </strong>
+
             <a href="tel:+573016495281">
               +57 301 649 5281
             </a>
+
           </div>
 
+
           <div class="contact-item">
-            <strong>Location</strong>
+
+            <strong>
+              Location
+            </strong>
+
             Colombia
+
           </div>
 
         </div>
@@ -1802,6 +2537,7 @@
   </main>
 
 
+
   <!-- =========================
        FOOTER
   ========================== -->
@@ -1810,11 +2546,17 @@
 
     <div class="container">
 
+
       <div class="footer-top">
+
 
         <div class="footer-brand">
 
-          <img src="Logo.png" alt="Avelor logo" />
+          <img
+            src="Logo.png"
+            alt="Avelor logo"
+          />
+
 
           <div
             class="footer-tagline"
@@ -1827,7 +2569,11 @@
         </div>
 
 
-        <nav class="footer-links">
+
+        <nav
+          class="footer-links"
+          aria-label="Footer navigation"
+        >
 
           <a
             href="#platform"
@@ -1874,11 +2620,13 @@
       </div>
 
 
+
       <div class="footer-bottom">
 
         <div>
           © 2026 Avelor
         </div>
+
 
         <div
           data-en="Operated by Juan Felipe Ospina Duque"
@@ -1894,6 +2642,7 @@
   </footer>
 
 
+
   <!-- =========================
        LANGUAGE + MOBILE MENU
   ========================== -->
@@ -1903,76 +2652,167 @@
     const enBtn = document.getElementById("enBtn");
     const esBtn = document.getElementById("esBtn");
 
-    function setLanguage(language) {
-
-      document.documentElement.lang = language;
-
-      document.querySelectorAll("[data-en]").forEach((element) => {
-
-        const translation = element.getAttribute(
-          `data-${language}`
-        );
-
-        if (translation) {
-          element.textContent = translation;
-        }
-
-      });
-
-      if (language === "en") {
-        enBtn.classList.add("active");
-        esBtn.classList.remove("active");
-      } else {
-        esBtn.classList.add("active");
-        enBtn.classList.remove("active");
-      }
-
-      localStorage.setItem("avelor-language", language);
-    }
-
-    enBtn.addEventListener("click", () => {
-      setLanguage("en");
-    });
-
-    esBtn.addEventListener("click", () => {
-      setLanguage("es");
-    });
-
-
-    const savedLanguage =
-      localStorage.getItem("avelor-language");
-
-    if (savedLanguage === "es") {
-      setLanguage("es");
-    } else {
-      setLanguage("en");
-    }
-
-
     const mobileMenu =
       document.getElementById("mobileMenu");
 
     const mobileNav =
       document.getElementById("mobileNav");
 
-    mobileMenu.addEventListener("click", () => {
 
-      mobileNav.classList.toggle("open");
+    /* =========================
+       LANGUAGE
+    ========================== */
 
-    });
+    function setLanguage(language) {
+
+      document.documentElement.lang = language;
+
+
+      document
+        .querySelectorAll("[data-en]")
+        .forEach((element) => {
+
+          const translation =
+            element.getAttribute(
+              `data-${language}`
+            );
+
+          if (translation !== null) {
+            element.textContent = translation;
+          }
+
+        });
+
+
+      if (language === "en") {
+
+        enBtn.classList.add("active");
+        esBtn.classList.remove("active");
+
+        enBtn.setAttribute(
+          "aria-pressed",
+          "true"
+        );
+
+        esBtn.setAttribute(
+          "aria-pressed",
+          "false"
+        );
+
+      } else {
+
+        esBtn.classList.add("active");
+        enBtn.classList.remove("active");
+
+        esBtn.setAttribute(
+          "aria-pressed",
+          "true"
+        );
+
+        enBtn.setAttribute(
+          "aria-pressed",
+          "false"
+        );
+
+      }
+
+
+      localStorage.setItem(
+        "avelor-language",
+        language
+      );
+
+    }
+
+
+    enBtn.addEventListener(
+      "click",
+      () => {
+        setLanguage("en");
+      }
+    );
+
+
+    esBtn.addEventListener(
+      "click",
+      () => {
+        setLanguage("es");
+      }
+    );
+
+
+    const savedLanguage =
+      localStorage.getItem(
+        "avelor-language"
+      );
+
+
+    if (savedLanguage === "es") {
+
+      setLanguage("es");
+
+    } else {
+
+      setLanguage("en");
+
+    }
+
+
+
+    /* =========================
+       MOBILE MENU
+    ========================== */
+
+    mobileMenu.addEventListener(
+      "click",
+      () => {
+
+        const isOpen =
+          mobileNav.classList.toggle("open");
+
+        mobileMenu.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
+
+        mobileMenu.setAttribute(
+          "aria-label",
+          isOpen
+            ? "Close menu"
+            : "Open menu"
+        );
+
+      }
+    );
 
 
     document
       .querySelectorAll(".mobile-nav a")
       .forEach((link) => {
 
-        link.addEventListener("click", () => {
-          mobileNav.classList.remove("open");
-        });
+        link.addEventListener(
+          "click",
+          () => {
+
+            mobileNav.classList.remove("open");
+
+            mobileMenu.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            mobileMenu.setAttribute(
+              "aria-label",
+              "Open menu"
+            );
+
+          }
+        );
 
       });
 
   </script>
 
 </body>
+
 </html>
