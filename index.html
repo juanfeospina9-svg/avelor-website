@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Avelor — Growth Intelligence Platform. Connect conversations, leads, sales, campaigns and business operations in one intelligent workspace."
+  />
+
+  <meta
+    name="keywords"
+    content="Avelor, Growth Intelligence, business growth, sales, campaigns, conversations, leads"
+  />
+
+  <meta name="author" content="Avelor" />
+
+  <meta property="og:title" content="Avelor — Growth Intelligence Platform" />
+  <meta
+    property="og:description"
+    content="Connect conversations, leads, sales, campaigns and business operations in one intelligent workspace."
+  />
+  <meta property="og:type" content="website" />
+
+  <title>Avelor — Growth Intelligence Platform</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --navy: #163A4D;
+      --deep-navy: #0D2938;
+      --copper: #BA6A2D;
+      --copper-light: #D18A54;
+      --warm-white: #FAFAF8;
+      --soft-gray: #F3F5F6;
+      --text: #18242B;
+      --muted: #64727A;
+      --white: #FFFFFF;
+      --border: rgba(22, 58, 77, 0.12);
+      --shadow: 0 20px 60px rgba(13, 41, 56, 0.10);
+      --radius: 20px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background: var(--warm-white);
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "Manrope", sans-serif;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(250, 250, 248, 0.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .brand img {
+      width: 145px;
+      height: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--copper);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .language-switch {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--white);
+    }
+
+    .language-switch button {
+      border: 0;
+      background: transparent;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+    }
+
+    .language-switch button.active {
+      color: var(--navy);
+      background: var(--soft-gray);
+    }
+
+    .mobile-menu {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 26px;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: var(--navy);
+      box-shadow: 0 8px 24px rgba(22, 58, 77, 0.16);
+    }
+
+    .btn-primary:hover {
+      background: var(--deep-navy);
+    }
+
+    .btn-secondary {
+      color: var(--navy);
+      background: var(--white);
+      border-color: rgba(22, 58, 77, 0.20);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--navy);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 110px;
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(186, 106, 45, 0.10),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #FAFAF8 0%,
+          #FFFFFF 55%,
+          #F4F7F7 100%
+        );
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      right: -260px;
+      top: -240px;
+      border: 1px solid rgba(186, 106, 45, 0.20);
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--copper);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--copper);
+    }
+
+    .hero h1 {
+      max-width: 680px;
+      font-size: clamp(48px, 6vw, 78px);
+      color: var(--navy);
+    }
+
+    .hero h1 span {
+      color: var(--copper);
+    }
+
+    .hero-description {
+      max-width: 610px;
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      margin-top: 34px;
+      flex-wrap: wrap;
+    }
+
+    .hero-tagline {
+      margin-top: 30px;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-tagline span {
+      color: var(--copper);
+    }
+
+    /* Product visual */
+
+    .product-visual {
+      position: relative;
+    }
+
+    .product-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid rgba(22, 58, 77, 0.12);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      min-height: 430px;
+    }
+
+    .product-topbar {
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .product-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .product-brand-mark {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      background: var(--navy);
+      border-radius: 8px;
+      font-size: 13px;
+    }
+
+    .product-status {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .product-body {
+      display: grid;
+      grid-template-columns: 145px 1fr;
+      min-height: 368px;
+    }
+
+    .product-sidebar {
+      padding: 24px 16px;
+      background: var(--deep-navy);
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .sidebar-title {
+      color: var(--white);
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .sidebar-item {
+      padding: 9px 10px;
+      margin-bottom: 5px;
+      border-radius: 7px;
+      font-size: 11px;
+    }
+
+    .sidebar-item.active {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.10);
+    }
+
+    .product-content {
+      padding: 24px;
+      background: #FCFDFC;
+    }
+
+    .dashboard-title {
+      font-family: "Manrope", sans-serif;
+      color: var(--navy);
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    .dashboard-subtitle {
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 3px;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 9px;
+      margin-top: 20px;
+    }
+
+    .metric {
+      padding: 13px 10px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 9px;
+    }
+
+    .metric-value {
+      margin-top: 4px;
+      color: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .dashboard-panels {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .dashboard-panel {
+      min-height: 180px;
+      padding: 17px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .panel-title {
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .chart {
+      position: relative;
+      height: 105px;
+      margin-top: 15px;
+      border-bottom: 1px solid rgba(22, 58, 77, 0.10);
+      background:
+        repeating-linear-gradient(
+          to bottom,
+          transparent 0,
+          transparent 25px,
+          rgba(22, 58, 77, 0.06) 26px
+        );
+    }
+
+    .chart-line {
+      position: absolute;
+      left: 3%;
+      right: 3%;
+      bottom: 24px;
+      height: 55px;
+      border-top: 2px solid var(--copper);
+      border-radius: 50%;
+      transform: rotate(-4deg);
+    }
+
+    .channel {
+      margin-top: 14px;
+    }
+
+    .channel-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .channel-bar {
+      height: 5px;
+      margin-top: 4px;
+      border-radius: 999px;
+      background: var(--soft-gray);
+      overflow: hidden;
+    }
+
+    .channel-fill {
+      height: 100%;
+      border-radius: inherit;
+      background: var(--navy);
+    }
+
+    /* =========================
+       PLATFORM
+    ========================== */
+
+    .section {
+      padding: 105px 0;
+    }
+
+    .section-light {
+      background: var(--white);
+    }
+
+    .section-soft {
+      background: var(--soft-gray);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 52px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      justify-content: center;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: clamp(36px, 4vw, 54px);
+    }
+
+    .section-heading p {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature-card {
+      padding: 30px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 24px;
+      color: var(--white);
+      background: var(--navy);
+      border-radius: 12px;
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+    }
+
+    .feature-card:nth-child(2) .feature-icon,
+    .feature-card:nth-child(4) .feature-icon {
+      background: var(--copper);
+    }
+
+    .feature-card h3 {
+      color: var(--navy);
+      font-size: 21px;
+    }
+
+    .feature-card p {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       WORKFLOW
+    ========================== */
+
+    .workflow-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .workflow-copy h2 {
+      color: var(--navy);
+      font-size: clamp(38px, 4vw, 55px);
+    }
+
+    .workflow-copy p {
+      max-width: 500px;
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .workflow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .workflow-step {
+      flex: 1;
+      text-align: center;
+    }
+
+    .workflow-circle {
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 14px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--navy);
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .workflow-step:nth-child(2) .workflow-circle,
+    .workflow-step:nth-child(4) .workflow-circle {
+      background: var(--copper);
+    }
+
+    .workflow-step h4 {
+      color: var(--navy);
+      font-size: 13px;
+      letter-spacing: -0.01em;
+    }
+
+    .workflow-step p {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .workflow-arrow {
+      color: var(--copper);
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .about-copy h2 {
+      color: var(--navy);
+      font-size: clamp(38px, 4vw, 54px);
+    }
+
+    .about-copy p {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .about-panel {
+      position: relative;
+      min-height: 390px;
+      overflow: hidden;
+      border-radius: 24px;
+      background:
+        linear-gradient(
+          135deg,
+          var(--deep-navy),
+          var(--navy)
+        );
+      box-shadow: var(--shadow);
+    }
+
+    .about-panel::before,
+    .about-panel::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .about-panel::before {
+      width: 480px;
+      height: 480px;
+      top: -200px;
+      right: -180px;
+    }
+
+    .about-panel::after {
+      width: 280px;
+      height: 280px;
+      bottom: -120px;
+      left: -100px;
+    }
+
+    .about-content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      min-height: 390px;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .about-label {
+      color: var(--copper-light);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+    }
+
+    .about-content h3 {
+      max-width: 390px;
+      margin-top: 12px;
+      color: var(--white);
+      font-size: 38px;
+    }
+
+    .about-content p {
+      max-width: 390px;
+      margin-top: 15px;
+      color: rgba(255, 255, 255, 0.70);
+      font-size: 14px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+      padding: 75px 0;
+      color: var(--white);
+      background: var(--deep-navy);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .contact h2 {
+      font-size: clamp(38px, 4vw, 56px);
+    }
+
+    .contact p {
+      max-width: 610px;
+      margin-top: 15px;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 16px;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 13px;
+      padding-left: 40px;
+      border-left: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .contact-item {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 14px;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--copper-light);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .contact-action {
+      margin-top: 28px;
+    }
+
+    .contact-action .btn {
+      color: var(--navy);
+      background: var(--white);
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 45px 0 30px;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-brand img {
+      width: 145px;
+    }
+
+    .footer-tagline {
+      margin-top: 9px;
+      color: var(--muted);
+      font-family: "Manrope", sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--copper);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      margin-top: 45px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 950px) {
+      .nav-links,
+      .nav-actions .btn {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .hero-grid,
+      .workflow-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 75px 0 80px;
+      }
+
+      .product-visual {
+        max-width: 720px;
+      }
+
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .workflow-grid {
+        gap: 50px;
+      }
+
+      .contact-info {
+        padding-left: 0;
+        padding-top: 25px;
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .nav-inner {
+        height: 68px;
+      }
+
+      .brand img,
+      .footer-brand img {
+        width: 125px;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-card {
+        min-height: auto;
+      }
+
+      .product-body {
+        grid-template-columns: 1fr;
+      }
+
+      .product-sidebar {
+        display: none;
+      }
+
+      .metric-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .dashboard-panels {
+        grid-template-columns: 1fr;
+      }
+
+      .workflow {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+
+      .workflow-arrow {
+        display: none;
+      }
+
+      .about-content {
+        padding: 35px;
+      }
+
+      .about-panel,
+      .about-content {
+        min-height: 340px;
+      }
+
+      .footer-top,
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .footer-links {
+        gap: 18px;
+      }
+    }
+
+    /* Mobile navigation opened */
+    .mobile-nav {
+      display: none;
+      padding: 16px 0 22px;
+      border-top: 1px solid var(--border);
+    }
+
+    .mobile-nav.open {
+      display: block;
+    }
+
+    .mobile-nav a {
+      display: block;
+      padding: 11px 0;
+      font-size: 14px;
+      color: var(--text);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header class="navbar">
+    <div class="container nav-inner">
+
+      <a href="#top" class="brand">
+        <img src="Logo.png" alt="Avelor logo" />
+      </a>
+
+      <nav class="nav-links">
+        <a href="#platform" data-en="Platform" data-es="Plataforma">Platform</a>
+        <a href="#solutions" data-en="Solutions" data-es="Soluciones">Solutions</a>
+        <a href="#about" data-en="About" data-es="Nosotros">About</a>
+        <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+
+        <div class="language-switch">
+          <button id="enBtn" class="active">EN</button>
+          <button id="esBtn">ES</button>
+        </div>
+
+        <a
+          href="#contact"
+          class="btn btn-primary"
+          data-en="Get in touch →"
+          data-es="Contáctanos →"
+        >
+          Get in touch →
+        </a>
+
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="container">
+      <nav class="mobile-nav" id="mobileNav">
+        <a href="#platform" data-en="Platform" data-es="Plataforma">Platform</a>
+        <a href="#solutions" data-en="Solutions" data-es="Soluciones">Solutions</a>
+        <a href="#about" data-en="About" data-es="Nosotros">About</a>
+        <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main id="top">
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div>
+
+          <div
+            class="eyebrow"
+            data-en="Growth Intelligence Platform"
+            data-es="Sistemas de Crecimiento"
+          >
+            Growth Intelligence Platform
+          </div>
+
+          <h1>
+            <span data-en="Growth Intelligence," data-es="Inteligencia de crecimiento,">
+              Growth Intelligence,
+            </span>
+            <br />
+            <span data-en="connected." data-es="conectada.">
+              connected.
+            </span>
+          </h1>
+
+          <p
+            class="hero-description"
+            data-en="Avelor brings conversations, leads, sales, campaigns and business operations together in one intelligent workspace."
+            data-es="Avelor integra conversaciones, leads, ventas, campañas y operaciones comerciales en un solo espacio inteligente."
+          >
+            Avelor brings conversations, leads, sales, campaigns and business operations together in one intelligent workspace.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              href="#contact"
+              class="btn btn-primary"
+              data-en="Get in touch →"
+              data-es="Contáctanos →"
+            >
+              Get in touch →
+            </a>
+
+            <a
+              href="#platform"
+              class="btn btn-secondary"
+              data-en="Explore Avelor"
+              data-es="Conocer Avelor"
+            >
+              Explore Avelor
+            </a>
+
+          </div>
+
+          <div
+            class="hero-tagline"
+            data-en="Systems for growth"
+            data-es="Sistemas de Crecimiento"
+          >
+            <span>—</span> Systems for growth
+          </div>
+
+        </div>
+
+
+        <!-- Product visual -->
+        <div class="product-visual">
+
+          <div class="product-card">
+
+            <div class="product-topbar">
+
+              <div class="product-brand">
+                <div class="product-brand-mark">A</div>
+                AVELOR
+              </div>
+
+              <div
+                class="product-status"
+                data-en="Growth workspace"
+                data-es="Espacio de crecimiento"
+              >
+                Growth workspace
+              </div>
+
+            </div>
+
+
+            <div class="product-body">
+
+              <aside class="product-sidebar">
+
+                <div class="sidebar-title">AVELOR</div>
+
+                <div class="sidebar-item active">Overview</div>
+                <div class="sidebar-item">Conversations</div>
+                <div class="sidebar-item">Leads</div>
+                <div class="sidebar-item">Sales</div>
+                <div class="sidebar-item">Campaigns</div>
+                <div class="sidebar-item">Tasks</div>
+                <div class="sidebar-item">Insights</div>
+
+              </aside>
+
+
+              <div class="product-content">
+
+                <div
+                  class="dashboard-title"
+                  data-en="Your business, connected."
+                  data-es="Tu negocio, conectado."
+                >
+                  Your business, connected.
+                </div>
+
+                <div
+                  class="dashboard-subtitle"
+                  data-en="A clearer view of your growth activity."
+                  data-es="Una visión más clara de la actividad de tu negocio."
+                >
+                  A clearer view of your growth activity.
+                </div>
+
+
+                <div class="metric-grid">
+
+                  <div class="metric">
+                    <div class="metric-label">Conversations</div>
+                    <div class="metric-value">—</div>
+                  </div>
+
+                  <div class="metric">
+                    <div class="metric-label">Leads</div>
+                    <div class="metric-value">—</div>
+                  </div>
+
+                  <div class="metric">
+                    <div class="metric-label">Sales</div>
+                    <div class="metric-value">—</div>
+                  </div>
+
+                  <div class="metric">
+                    <div class="metric-label">Campaigns</div>
+                    <div class="metric-value">—</div>
+                  </div>
+
+                </div>
+
+
+                <div class="dashboard-panels">
+
+                  <div class="dashboard-panel">
+
+                    <div
+                      class="panel-title"
+                      data-en="Growth overview"
+                      data-es="Resumen de crecimiento"
+                    >
+                      Growth overview
+                    </div>
+
+                    <div class="chart">
+                      <div class="chart-line"></div>
+                    </div>
+
+                  </div>
+
+
+                  <div class="dashboard-panel">
+
+                    <div
+                      class="panel-title"
+                      data-en="Connected channels"
+                      data-es="Canales conectados"
+                    >
+                      Connected channels
+                    </div>
+
+                    <div class="channel">
+
+                      <div class="channel-row">
+                        <span>Conversations</span>
+                        <span>—</span>
+                      </div>
+
+                      <div class="channel-bar">
+                        <div class="channel-fill" style="width: 72%;"></div>
+                      </div>
+
+                      <div class="channel-row">
+                        <span>Sales</span>
+                        <span>—</span>
+                      </div>
+
+                      <div class="channel-bar">
+                        <div class="channel-fill" style="width: 54%;"></div>
+                      </div>
+
+                      <div class="channel-row">
+                        <span>Campaigns</span>
+                        <span>—</span>
+                      </div>
+
+                      <div class="channel-bar">
+                        <div class="channel-fill" style="width: 42%;"></div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         PLATFORM
+    ========================== -->
+
+    <section class="section section-light" id="platform">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div
+            class="eyebrow"
+            data-en="Platform"
+            data-es="Plataforma"
+          >
+            Platform
+          </div>
+
+          <h2
+            data-en="One connected system for growth."
+            data-es="Un sistema conectado para crecer."
+          >
+            One connected system for growth.
+          </h2>
+
+          <p
+            data-en="Everything you need to manage conversations, customers, sales and campaigns in one place."
+            data-es="Todo lo que necesitas para gestionar conversaciones, clientes, ventas y campañas en un solo lugar."
+          >
+            Everything you need to manage conversations, customers, sales and campaigns in one place.
+          </p>
+
+        </div>
+
+
+        <div class="feature-grid" id="solutions">
+
+          <article class="feature-card">
+
+            <div class="feature-icon">01</div>
+
+            <h3
+              data-en="Conversations"
+              data-es="Conversaciones"
+            >
+              Conversations
+            </h3>
+
+            <p
+              data-en="Manage customer conversations in one connected workspace."
+              data-es="Gestiona las conversaciones con clientes desde un espacio conectado."
+            >
+              Manage customer conversations in one connected workspace.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <div class="feature-icon">02</div>
+
+            <h3
+              data-en="Leads"
+              data-es="Leads"
+            >
+              Leads
+            </h3>
+
+            <p
+              data-en="Track opportunities from first contact through the sales journey."
+              data-es="Haz seguimiento de oportunidades desde el primer contacto hasta la venta."
+            >
+              Track opportunities from first contact through the sales journey.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <div class="feature-icon">03</div>
+
+            <h3
+              data-en="Sales"
+              data-es="Ventas"
+            >
+              Sales
+            </h3>
+
+            <p
+              data-en="Connect sales activity with the customers and campaigns behind it."
+              data-es="Conecta la actividad comercial con los clientes y campañas que la generan."
+            >
+              Connect sales activity with the customers and campaigns behind it.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <div class="feature-icon">04</div>
+
+            <h3
+              data-en="Campaigns"
+              data-es="Campañas"
+            >
+              Campaigns
+            </h3>
+
+            <p
+              data-en="Understand which campaigns contribute to your business results."
+              data-es="Entiende qué campañas contribuyen a los resultados de tu negocio."
+            >
+              Understand which campaigns contribute to your business results.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <div class="feature-icon">05</div>
+
+            <h3
+              data-en="Tasks"
+              data-es="Tareas"
+            >
+              Tasks
+            </h3>
+
+            <p
+              data-en="Keep teams organized, aligned and focused on execution."
+              data-es="Mantén los equipos organizados, alineados y enfocados en la ejecución."
+            >
+              Keep teams organized, aligned and focused on execution.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <div class="feature-icon">06</div>
+
+            <h3
+              data-en="Intelligence"
+              data-es="Inteligencia"
+            >
+              Intelligence
+            </h3>
+
+            <p
+              data-en="Turn business activity into clearer information for better decisions."
+              data-es="Convierte la actividad del negocio en información más clara para tomar mejores decisiones."
+            >
+              Turn business activity into clearer information for better decisions.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WORKFLOW
+    ========================== -->
+
+    <section class="section section-soft">
+
+      <div class="container workflow-grid">
+
+        <div class="workflow-copy">
+
+          <div
+            class="eyebrow"
+            data-en="How it works"
+            data-es="Cómo funciona"
+          >
+            How it works
+          </div>
+
+          <h2
+            data-en="Turn daily activity into real growth."
+            data-es="Convierte la actividad diaria en crecimiento real."
+          >
+            Turn daily activity into real growth.
+          </h2>
+
+          <p
+            data-en="Avelor connects the dots between conversations, leads, sales and campaigns, so businesses can focus on what really matters: growing."
+            data-es="Avelor conecta conversaciones, leads, ventas y campañas para que los negocios puedan enfocarse en lo que realmente importa: crecer."
+          >
+            Avelor connects the dots between conversations, leads, sales and campaigns, so businesses can focus on what really matters: growing.
+          </p>
+
+        </div>
+
+
+        <div class="workflow">
+
+          <div class="workflow-step">
+
+            <div class="workflow-circle">01</div>
+
+            <h4
+              data-en="Conversations"
+              data-es="Conversaciones"
+            >
+              Conversations
+            </h4>
+
+            <p
+              data-en="Capture and manage"
+              data-es="Captura y gestiona"
+            >
+              Capture and manage
+            </p>
+
+          </div>
+
+
+          <div class="workflow-arrow">→</div>
+
+
+          <div class="workflow-step">
+
+            <div class="workflow-circle">02</div>
+
+            <h4
+              data-en="Leads"
+              data-es="Leads"
+            >
+              Leads
+            </h4>
+
+            <p
+              data-en="Track and organize"
+              data-es="Haz seguimiento"
+            >
+              Track and organize
+            </p>
+
+          </div>
+
+
+          <div class="workflow-arrow">→</div>
+
+
+          <div class="workflow-step">
+
+            <div class="workflow-circle">03</div>
+
+            <h4
+              data-en="Sales"
+              data-es="Ventas"
+            >
+              Sales
+            </h4>
+
+            <p
+              data-en="Convert opportunities"
+              data-es="Convierte oportunidades"
+            >
+              Convert opportunities
+            </p>
+
+          </div>
+
+
+          <div class="workflow-arrow">→</div>
+
+
+          <div class="workflow-step">
+
+            <div class="workflow-circle">04</div>
+
+            <h4
+              data-en="Campaigns"
+              data-es="Campañas"
+            >
+              Campaigns
+            </h4>
+
+            <p
+              data-en="Measure and optimize"
+              data-es="Mide y optimiza"
+            >
+              Measure and optimize
+            </p>
+
+          </div>
+
+
+          <div class="workflow-arrow">→</div>
+
+
+          <div class="workflow-step">
+
+            <div class="workflow-circle">05</div>
+
+            <h4
+              data-en="Insights"
+              data-es="Insights"
+            >
+              Insights
+            </h4>
+
+            <p
+              data-en="Make better decisions"
+              data-es="Toma mejores decisiones"
+            >
+              Make better decisions
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="section section-light" id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-copy">
+
+          <div
+            class="eyebrow"
+            data-en="About Avelor"
+            data-es="Sobre Avelor"
+          >
+            About Avelor
+          </div>
+
+          <h2
+            data-en="A simpler way to build what's next."
+            data-es="Una forma más simple de construir lo que sigue."
+          >
+            A simpler way to build what's next.
+          </h2>
+
+          <p
+            data-en="Avelor is a Growth Intelligence Platform designed for businesses that want a clearer view of how their conversations, customers, sales and marketing connect."
+            data-es="Avelor es una plataforma de inteligencia de crecimiento diseñada para negocios que buscan una visión más clara de cómo se conectan sus conversaciones, clientes, ventas y marketing."
+          >
+            Avelor is a Growth Intelligence Platform designed for businesses that want a clearer view of how their conversations, customers, sales and marketing connect.
+          </p>
+
+          <p
+            data-en="We believe growing a business should be simpler, more organized and more human. That's why we build tools that bring business activity together, so teams can move with greater clarity."
+            data-es="Creemos que hacer crecer un negocio debería ser más simple, organizado y humano. Por eso construimos herramientas que conectan la actividad del negocio para que los equipos puedan avanzar con mayor claridad."
+          >
+            We believe growing a business should be simpler, more organized and more human. That's why we build tools that bring business activity together, so teams can move with greater clarity.
+          </p>
+
+        </div>
+
+
+        <div class="about-panel">
+
+          <div class="about-content">
+
+            <div
+              class="about-label"
+              data-en="Built for growing businesses"
+              data-es="Creado para negocios en crecimiento"
+            >
+              Built for growing businesses
+            </div>
+
+            <h3
+              data-en="Tools. Data. People. Connected for real growth."
+              data-es="Herramientas. Datos. Personas. Conectados para crecer de verdad."
+            >
+              Tools. Data. People. Connected for real growth.
+            </h3>
+
+            <p
+              data-en="Avelor brings the essential pieces of business growth into one connected system."
+              data-es="Avelor reúne las piezas esenciales del crecimiento empresarial en un sistema conectado."
+            >
+              Avelor brings the essential pieces of business growth into one connected system.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+      <div class="container contact-grid">
+
+        <div>
+
+          <div
+            class="eyebrow"
+            data-en="Let's talk"
+            data-es="Hablemos"
+          >
+            Let's talk
+          </div>
+
+          <h2
+            data-en="Ready to explore Avelor?"
+            data-es="¿Listo para conocer Avelor?"
+          >
+            Ready to explore Avelor?
+          </h2>
+
+          <p
+            data-en="Let's talk about how Avelor can help you connect your business and unlock new growth."
+            data-es="Hablemos sobre cómo Avelor puede ayudarte a conectar tu negocio y desbloquear nuevas oportunidades de crecimiento."
+          >
+            Let's talk about how Avelor can help you connect your business and unlock new growth.
+          </p>
+
+          <div class="contact-action">
+
+            <a
+              href="mailto:studioavelor@gmail.com"
+              class="btn"
+              data-en="Get in touch →"
+              data-es="Contáctanos →"
+            >
+              Get in touch →
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-info">
+
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a href="mailto:studioavelor@gmail.com">
+              studioavelor@gmail.com
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <strong>Phone</strong>
+            <a href="tel:+573016495281">
+              +57 301 649 5281
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <strong>Location</strong>
+            Colombia
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+
+          <img src="Logo.png" alt="Avelor logo" />
+
+          <div
+            class="footer-tagline"
+            data-en="Growth Intelligence Platform"
+            data-es="Sistemas de Crecimiento"
+          >
+            Growth Intelligence Platform
+          </div>
+
+        </div>
+
+
+        <nav class="footer-links">
+
+          <a
+            href="#platform"
+            data-en="Platform"
+            data-es="Plataforma"
+          >
+            Platform
+          </a>
+
+          <a
+            href="#about"
+            data-en="About"
+            data-es="Nosotros"
+          >
+            About
+          </a>
+
+          <a
+            href="#contact"
+            data-en="Contact"
+            data-es="Contacto"
+          >
+            Contact
+          </a>
+
+          <a
+            href="privacy.html"
+            data-en="Privacy"
+            data-es="Privacidad"
+          >
+            Privacy
+          </a>
+
+          <a
+            href="terms.html"
+            data-en="Terms"
+            data-es="Términos"
+          >
+            Terms
+          </a>
+
+        </nav>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 Avelor
+        </div>
+
+        <div
+          data-en="Operated by Juan Felipe Ospina Duque"
+          data-es="Operado por Juan Felipe Ospina Duque"
+        >
+          Operated by Juan Felipe Ospina Duque
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       LANGUAGE + MOBILE MENU
+  ========================== -->
+
+  <script>
+
+    const enBtn = document.getElementById("enBtn");
+    const esBtn = document.getElementById("esBtn");
+
+    function setLanguage(language) {
+
+      document.documentElement.lang = language;
+
+      document.querySelectorAll("[data-en]").forEach((element) => {
+
+        const translation = element.getAttribute(
+          `data-${language}`
+        );
+
+        if (translation) {
+          element.textContent = translation;
+        }
+
+      });
+
+      if (language === "en") {
+        enBtn.classList.add("active");
+        esBtn.classList.remove("active");
+      } else {
+        esBtn.classList.add("active");
+        enBtn.classList.remove("active");
+      }
+
+      localStorage.setItem("avelor-language", language);
+    }
+
+    enBtn.addEventListener("click", () => {
+      setLanguage("en");
+    });
+
+    esBtn.addEventListener("click", () => {
+      setLanguage("es");
+    });
+
+
+    const savedLanguage =
+      localStorage.getItem("avelor-language");
+
+    if (savedLanguage === "es") {
+      setLanguage("es");
+    } else {
+      setLanguage("en");
+    }
+
+
+    const mobileMenu =
+      document.getElementById("mobileMenu");
+
+    const mobileNav =
+      document.getElementById("mobileNav");
+
+    mobileMenu.addEventListener("click", () => {
+
+      mobileNav.classList.toggle("open");
+
+    });
+
+
+    document
+      .querySelectorAll(".mobile-nav a")
+      .forEach((link) => {
+
+        link.addEventListener("click", () => {
+          mobileNav.classList.remove("open");
+        });
+
+      });
+
+  </script>
+
+</body>
+</html>
