@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <link rel="icon" type="image/png" href="../Isotipo.png">
+
+  <title>Terms of Use — Avelor</title>
+
+  <meta
+    name="description"
+    content="Terms of Use for Avelor — Growth Intelligence Platform."
+  >
+
+  <style>
+
+    :root {
+      --navy: #163A4D;
+      --deep-navy: #0D2938;
+      --copper: #BA6A2D;
+      --warm-white: #FAFAF8;
+      --soft-gray: #F3F5F6;
+      --text: #18242B;
+      --muted: #64727A;
+      --border: #E2E7E9;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: var(--warm-white);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+
+      height: 72px;
+
+      display: flex;
+      align-items: center;
+
+      background: rgba(250, 250, 248, 0.94);
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      width: min(1080px, 88%);
+      margin: 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .brand img {
+      display: block;
+      width: 138px;
+      height: auto;
+    }
+
+    .language-switch {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      padding: 4px;
+
+      border: 1px solid var(--border);
+      border-radius: 999px;
+
+      background: #ffffff;
+    }
+
+    .language-switch button {
+      border: 0;
+      background: transparent;
+
+      padding: 7px 10px;
+
+      border-radius: 999px;
+
+      font: inherit;
+      font-size: 12px;
+      font-weight: 700;
+
+      color: var(--muted);
+
+      cursor: pointer;
+    }
+
+    .language-switch button.active {
+      background: var(--soft-gray);
+      color: var(--navy);
+    }
+
+    main {
+      width: min(900px, 88%);
+      margin: 0 auto;
+
+      padding: 72px 0 100px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      margin-bottom: 48px;
+
+      color: var(--navy);
+
+      font-size: 14px;
+      font-weight: 700;
+
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--copper);
+    }
+
+    .eyebrow {
+      margin-bottom: 14px;
+
+      color: var(--copper);
+
+      font-size: 12px;
+      font-weight: 800;
+
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+
+      color: var(--navy);
+
+      font-size: clamp(42px, 6vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+
+    .updated {
+      margin-bottom: 56px;
+
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .legal-section {
+      margin-bottom: 42px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+
+      color: var(--navy);
+
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    p,
+    li {
+      color: var(--muted);
+
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    .contact-box {
+      margin-top: 20px;
+      padding: 24px 26px;
+
+      background: var(--soft-gray);
+
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .contact-box p {
+      margin: 0;
+    }
+
+    .contact-box a {
+      color: var(--navy);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-box a:hover {
+      color: var(--copper);
+    }
+
+    .legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+
+      margin-top: 70px;
+      padding-top: 28px;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .legal-links a {
+      color: var(--navy);
+
+      font-size: 14px;
+      font-weight: 700;
+
+      text-decoration: none;
+    }
+
+    .legal-links a:hover {
+      color: var(--copper);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+
+      padding: 28px 0;
+    }
+
+    .footer-inner {
+      width: min(1080px, 88%);
+      margin: 0 auto;
+    }
+
+    .footer-copy {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-copy strong {
+      color: var(--navy);
+    }
+
+    [data-lang] {
+      display: none;
+    }
+
+    [data-lang="en"] {
+      display: block;
+    }
+
+    @media (max-width: 700px) {
+
+      header {
+        height: 66px;
+      }
+
+      .nav {
+        width: 90%;
+      }
+
+      .brand img {
+        width: 118px;
+      }
+
+      main {
+        width: 90%;
+        padding: 52px 0 72px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .footer-inner {
+        width: 90%;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <header>
+
+    <div class="nav">
+
+      <a
+        class="brand"
+        href="/"
+        aria-label="Avelor home"
+      >
+        <img
+          src="../Logo.png"
+          alt="Avelor"
+        >
+      </a>
+
+      <div class="language-switch">
+
+        <button
+          type="button"
+          id="lang-en"
+          class="active"
+          onclick="setLanguage('en')"
+        >
+          EN
+        </button>
+
+        <button
+          type="button"
+          id="lang-es"
+          onclick="setLanguage('es')"
+        >
+          ES
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <a
+      class="back-link"
+      href="/"
+    >
+      <span data-lang="en">← Back to home</span>
+      <span data-lang="es">← Volver al inicio</span>
+    </a>
+
+
+    <!-- =========================
+         ENGLISH
+    ========================== -->
+
+    <div data-lang="en">
+
+      <div class="eyebrow">
+        Avelor
+      </div>
+
+      <h1>
+        Terms of Use
+      </h1>
+
+      <div class="updated">
+        Last updated: September 2026
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>1. About Avelor</h2>
+
+        <p>
+          Avelor is a growth technology platform operated from Colombia
+          by Juan Felipe Ospina Duque. Avelor provides digital tools and
+          services designed to help businesses organize conversations,
+          leads, sales, campaigns and related business operations.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>2. Use of the Website</h2>
+
+        <p>
+          You agree to use this website lawfully and responsibly. You
+          must not use the website to violate applicable laws, infringe
+          the rights of others, distribute malicious software, attempt
+          unauthorized access, or interfere with the operation or
+          security of the website.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>3. Services</h2>
+
+        <p>
+          Information presented on this website is provided for general
+          informational purposes. Specific services, features, pricing,
+          availability, integrations, and commercial terms may vary
+          depending on the applicable agreement between Avelor and a
+          customer.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>4. Third-Party Platforms</h2>
+
+        <p>
+          Avelor may integrate with or rely on third-party services such
+          as communication, advertising, hosting, infrastructure,
+          analytics, or authentication providers. Your use of those
+          third-party services may also be governed by their own terms
+          and policies.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>5. Intellectual Property</h2>
+
+        <p>
+          Unless otherwise indicated, the Avelor name, branding, website
+          content, design, graphics, software concepts, and related
+          materials are owned by or used by Avelor and may not be copied,
+          reproduced, modified, distributed, or commercially exploited
+          without appropriate authorization.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>6. Availability</h2>
+
+        <p>
+          We may modify, suspend, update, or discontinue parts of the
+          website or services when reasonably necessary for maintenance,
+          development, security, legal compliance, or other operational
+          reasons.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>7. Disclaimer</h2>
+
+        <p>
+          We aim to provide accurate and useful information, but we do
+          not guarantee that all website content will always be complete,
+          current, uninterrupted, or error-free.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>8. Limitation of Liability</h2>
+
+        <p>
+          To the extent permitted by applicable law, Avelor and Juan
+          Felipe Ospina Duque will not be responsible for indirect,
+          incidental, consequential, or other losses arising from the
+          use of the website or reliance on information presented through
+          it.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>9. Changes to These Terms</h2>
+
+        <p>
+          These Terms of Use may be updated from time to time. Updated
+          versions will be published on this page together with the
+          corresponding effective date.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>10. Contact</h2>
+
+        <div class="contact-box">
+
+          <p>
+            <strong>Juan Felipe Ospina Duque</strong><br>
+            Avelor<br>
+            Colombia<br>
+            <a href="mailto:studioavelor@gmail.com">
+              studioavelor@gmail.com
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         SPANISH
+    ========================== -->
+
+    <div data-lang="es">
+
+      <div class="eyebrow">
+        Avelor
+      </div>
+
+      <h1>
+        Términos de Uso
+      </h1>
+
+      <div class="updated">
+        Última actualización: septiembre de 2026
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>1. Sobre Avelor</h2>
+
+        <p>
+          Avelor es una plataforma de tecnología para el crecimiento
+          operada desde Colombia por Juan Felipe Ospina Duque. Avelor
+          proporciona herramientas y servicios digitales diseñados para
+          ayudar a los negocios a organizar conversaciones, leads,
+          ventas, campañas y operaciones comerciales relacionadas.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>2. Uso del sitio web</h2>
+
+        <p>
+          El sitio web debe utilizarse de manera legal y responsable. No
+          está permitido utilizarlo para infringir leyes, vulnerar
+          derechos de terceros, distribuir software malicioso, intentar
+          obtener acceso no autorizado o interferir con la seguridad y
+          funcionamiento del sitio.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>3. Servicios</h2>
+
+        <p>
+          La información presentada en este sitio tiene fines generales
+          e informativos. Los servicios, funcionalidades, precios,
+          disponibilidad, integraciones y condiciones comerciales
+          específicas pueden variar según el acuerdo correspondiente
+          entre Avelor y cada cliente.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>4. Plataformas de terceros</h2>
+
+        <p>
+          Avelor puede integrarse con servicios de terceros relacionados
+          con comunicaciones, publicidad, alojamiento, infraestructura,
+          análisis o autenticación. El uso de dichos servicios también
+          puede estar sujeto a sus propios términos y políticas.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>5. Propiedad intelectual</h2>
+
+        <p>
+          Salvo indicación contraria, el nombre Avelor, su identidad de
+          marca, contenido, diseño, gráficos, conceptos de software y
+          materiales relacionados son propiedad de Avelor o son
+          utilizados legítimamente por Avelor y no pueden copiarse,
+          reproducirse, modificarse, distribuirse o explotarse
+          comercialmente sin la autorización correspondiente.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>6. Disponibilidad</h2>
+
+        <p>
+          Podemos modificar, suspender, actualizar o discontinuar partes
+          del sitio o de los servicios cuando sea necesario por
+          mantenimiento, desarrollo, seguridad, cumplimiento legal u
+          otras razones operativas.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>7. Descargo de responsabilidad</h2>
+
+        <p>
+          Buscamos proporcionar información precisa y útil, pero no
+          garantizamos que todo el contenido del sitio sea siempre
+          completo, actualizado, ininterrumpido o libre de errores.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>8. Limitación de responsabilidad</h2>
+
+        <p>
+          En la medida permitida por la legislación aplicable, Avelor y
+          Juan Felipe Ospina Duque no serán responsables por pérdidas
+          indirectas, incidentales, consecuenciales u otros daños
+          derivados del uso del sitio o de la confianza depositada en la
+          información presentada.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>9. Cambios en estos términos</h2>
+
+        <p>
+          Estos Términos de Uso pueden actualizarse periódicamente. Las
+          versiones actualizadas se publicarán en esta página junto con
+          su correspondiente fecha de vigencia.
+        </p>
+
+      </div>
+
+
+      <div class="legal-section">
+
+        <h2>10. Contacto</h2>
+
+        <div class="contact-box">
+
+          <p>
+            <strong>Juan Felipe Ospina Duque</strong><br>
+            Avelor<br>
+            Colombia<br>
+            <a href="mailto:studioavelor@gmail.com">
+              studioavelor@gmail.com
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         LEGAL LINKS
+    ========================== -->
+
+    <div class="legal-links">
+
+      <a href="/privacy/">
+        Privacy Policy
+      </a>
+
+      <a href="/terms/">
+        Terms of Use
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-copy">
+
+        <strong>Avelor</strong> ·
+
+        <span data-lang="en">
+          © 2026 Avelor · Operated by Juan Felipe Ospina Duque
+        </span>
+
+        <span data-lang="es">
+          © 2026 Avelor · Operado por Juan Felipe Ospina Duque
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    function setLanguage(lang) {
+
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll('[data-lang]').forEach(element => {
+
+        element.style.display =
+          element.getAttribute('data-lang') === lang
+            ? 'block'
+            : 'none';
+
+      });
+
+      document.getElementById('lang-en')
+        .classList.toggle('active', lang === 'en');
+
+      document.getElementById('lang-es')
+        .classList.toggle('active', lang === 'es');
+
+      localStorage.setItem('avelor-language', lang);
+
+    }
+
+
+    const savedLanguage =
+      localStorage.getItem('avelor-language') || 'en';
+
+    setLanguage(savedLanguage);
+
+  </script>
+
+</body>
+
+</html>
