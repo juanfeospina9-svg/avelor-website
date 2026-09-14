@@ -24,30 +24,61 @@
     :root {
       --navy: #163A4D;
       --deep-navy: #0D2938;
+
       --copper: #BA6A2D;
+      --copper-light: #D18A54;
+      --copper-soft: #F5E9E0;
+
       --warm-white: #FAFAF8;
+      --white: #FFFFFF;
+
       --soft-gray: #F3F5F6;
       --text: #18242B;
-      --muted: #64727A;
+      --muted: #5E6C74;
+
       --border: #E2E7E9;
+      --border-dark: #D7DEE1;
     }
+
 
     * {
       box-sizing: border-box;
     }
 
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
     body {
       margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
+
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
       background: var(--warm-white);
       color: var(--text);
+
       line-height: 1.7;
+
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
+
 
     a {
       color: inherit;
     }
+
+
+    /* =========================
+       HEADER
+    ========================== */
 
     header {
       position: sticky;
@@ -59,11 +90,14 @@
       display: flex;
       align-items: center;
 
-      background: rgba(250, 250, 248, 0.94);
-      backdrop-filter: blur(12px);
+      background: rgba(250, 250, 248, 0.95);
+
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
 
       border-bottom: 1px solid var(--border);
     }
+
 
     .nav {
       width: min(1080px, 88%);
@@ -72,33 +106,56 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       gap: 24px;
     }
+
 
     .brand {
       display: inline-flex;
       align-items: center;
+
       text-decoration: none;
     }
 
+
     .brand img {
       display: block;
+
       width: 138px;
       height: auto;
     }
 
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+
+      gap: 18px;
+    }
+
+
+    /* =========================
+       LANGUAGE SWITCH
+    ========================== */
+
     .language-switch {
       display: flex;
       align-items: center;
+
       gap: 4px;
 
       padding: 4px;
 
+      background: var(--white);
+
       border: 1px solid var(--border);
       border-radius: 999px;
 
-      background: #ffffff;
+      box-shadow:
+        0 2px 8px rgba(13, 41, 56, 0.04);
     }
+
 
     .language-switch button {
       border: 0;
@@ -115,140 +172,344 @@
       color: var(--muted);
 
       cursor: pointer;
+
+      transition:
+        color 0.2s ease,
+        background 0.2s ease;
     }
+
+
+    .language-switch button:hover {
+      color: var(--navy);
+    }
+
 
     .language-switch button.active {
       background: var(--soft-gray);
       color: var(--navy);
     }
 
+
+    /* =========================
+       MAIN
+    ========================== */
+
     main {
       width: min(900px, 88%);
       margin: 0 auto;
 
-      padding: 72px 0 100px;
+      padding: 68px 0 96px;
     }
+
+
+    /* =========================
+       BACK LINK
+    ========================== */
 
     .back-link {
       display: inline-flex;
       align-items: center;
+
       gap: 8px;
 
-      margin-bottom: 48px;
+      margin-bottom: 50px;
 
       color: var(--navy);
 
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
 
       text-decoration: none;
+
+      transition: color 0.2s ease;
     }
+
+
+    .back-link::first-letter {
+      color: var(--copper);
+    }
+
 
     .back-link:hover {
       color: var(--copper);
     }
+
+
+    /* =========================
+       PAGE INTRO
+    ========================== */
+
+    .page-intro {
+      margin-bottom: 58px;
+
+      padding-bottom: 34px;
+
+      border-bottom: 1px solid var(--border);
+    }
+
 
     .eyebrow {
       margin-bottom: 14px;
 
       color: var(--copper);
 
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 800;
 
-      letter-spacing: 0.16em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
     }
+
 
     h1 {
       margin: 0 0 14px;
 
       color: var(--navy);
 
-      font-size: clamp(42px, 6vw, 64px);
-      line-height: 1.05;
-      letter-spacing: -0.035em;
+      font-size: clamp(42px, 6vw, 62px);
+      line-height: 1.04;
+
+      letter-spacing: -0.04em;
     }
+
 
     .updated {
-      margin-bottom: 56px;
+      margin: 0;
 
       color: var(--muted);
-      font-size: 14px;
+
+      font-size: 13px;
+      line-height: 1.6;
     }
+
+
+    /* =========================
+       LEGAL CONTENT
+    ========================== */
 
     .legal-section {
-      margin-bottom: 42px;
+      position: relative;
+
+      margin-bottom: 44px;
+      padding-left: 22px;
+
+      border-left: 1px solid var(--border);
     }
 
+
+    .section-heading {
+      display: flex;
+      align-items: baseline;
+
+      gap: 12px;
+
+      margin: 0 0 13px;
+    }
+
+
+    .section-number {
+      flex: 0 0 auto;
+
+      color: var(--copper);
+
+      font-size: 12px;
+      font-weight: 800;
+
+      letter-spacing: 0.04em;
+    }
+
+
     h2 {
-      margin: 0 0 12px;
+      margin: 0;
 
       color: var(--navy);
 
-      font-size: 22px;
-      line-height: 1.25;
+      font-size: 20px;
+      line-height: 1.3;
+
+      letter-spacing: -0.015em;
     }
 
-    p,
-    li {
+
+    .legal-section p,
+    .legal-section li {
       color: var(--muted);
 
-      font-size: 16px;
-      line-height: 1.75;
+      font-size: 15px;
+      line-height: 1.8;
     }
 
-    ul {
-      padding-left: 22px;
+
+    .legal-section p {
+      margin: 0;
     }
+
+
+    .legal-section ul {
+      margin: 8px 0 0;
+
+      padding-left: 21px;
+    }
+
+
+    .legal-section li {
+      margin-bottom: 3px;
+    }
+
+
+    /* =========================
+       SECTION ACCENT
+    ========================== */
+
+    .legal-section::before {
+      content: "";
+
+      position: absolute;
+
+      left: -2px;
+      top: 3px;
+
+      width: 3px;
+      height: 24px;
+
+      background: var(--copper);
+
+      border-radius: 0 3px 3px 0;
+    }
+
+
+    /* =========================
+       CONTACT BOX
+    ========================== */
 
     .contact-box {
+      position: relative;
+
       margin-top: 20px;
-      padding: 24px 26px;
+
+      padding: 24px 26px 24px 28px;
 
       background: var(--soft-gray);
 
       border: 1px solid var(--border);
       border-radius: 16px;
+
+      overflow: hidden;
     }
+
+
+    .contact-box::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      top: 0;
+      bottom: 0;
+
+      width: 3px;
+
+      background: var(--copper);
+    }
+
 
     .contact-box p {
       margin: 0;
+
+      color: var(--text);
+
+      font-size: 14px;
+      line-height: 1.85;
     }
+
+
+    .contact-box strong {
+      color: var(--navy);
+
+      font-weight: 800;
+    }
+
 
     .contact-box a {
       color: var(--navy);
+
       font-weight: 700;
+
       text-decoration: none;
+
+      transition: color 0.2s ease;
     }
+
 
     .contact-box a:hover {
       color: var(--copper);
     }
 
+
+    /* =========================
+       LEGAL LINKS
+    ========================== */
+
     .legal-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px 22px;
 
-      margin-top: 70px;
-      padding-top: 28px;
+      gap: 10px 24px;
+
+      margin-top: 72px;
+      padding-top: 26px;
 
       border-top: 1px solid var(--border);
     }
 
+
     .legal-links a {
+      position: relative;
+
       color: var(--navy);
 
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
 
       text-decoration: none;
+
+      transition: color 0.2s ease;
     }
+
+
+    .legal-links a::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: -4px;
+
+      height: 1px;
+
+      background: var(--copper);
+
+      transform: scaleX(0);
+      transform-origin: left;
+
+      transition: transform 0.2s ease;
+    }
+
 
     .legal-links a:hover {
       color: var(--copper);
     }
+
+
+    .legal-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
 
     footer {
       border-top: 1px solid var(--border);
@@ -256,27 +517,49 @@
       padding: 28px 0;
     }
 
+
     .footer-inner {
       width: min(1080px, 88%);
       margin: 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
     }
+
 
     .footer-copy {
       color: var(--muted);
-      font-size: 13px;
+
+      font-size: 12px;
+      line-height: 1.6;
     }
+
 
     .footer-copy strong {
       color: var(--navy);
     }
 
+
+    /* =========================
+       LANGUAGE CONTENT
+    ========================== */
+
     [data-lang] {
       display: none;
     }
 
+
     [data-lang="en"] {
       display: block;
     }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
 
     @media (max-width: 700px) {
 
@@ -284,25 +567,91 @@
         height: 66px;
       }
 
+
       .nav {
         width: 90%;
       }
+
 
       .brand img {
         width: 118px;
       }
 
+
+      .nav-right {
+        gap: 8px;
+      }
+
+
       main {
         width: 90%;
-        padding: 52px 0 72px;
+
+        padding: 48px 0 70px;
       }
+
+
+      .back-link {
+        margin-bottom: 40px;
+      }
+
+
+      .page-intro {
+        margin-bottom: 48px;
+
+        padding-bottom: 28px;
+      }
+
 
       h1 {
         font-size: 42px;
       }
 
+
+      .legal-section {
+        margin-bottom: 38px;
+
+        padding-left: 17px;
+      }
+
+
+      .section-heading {
+        gap: 9px;
+      }
+
+
+      .section-number {
+        font-size: 11px;
+      }
+
+
+      h2 {
+        font-size: 18px;
+      }
+
+
+      .legal-section p,
+      .legal-section li {
+        font-size: 14px;
+
+        line-height: 1.75;
+      }
+
+
+      .contact-box {
+        padding: 21px 21px 21px 24px;
+      }
+
+
+      .legal-links {
+        margin-top: 58px;
+      }
+
+
       .footer-inner {
         width: 90%;
+
+        flex-direction: column;
+        align-items: flex-start;
       }
 
     }
@@ -314,6 +663,11 @@
 
 <body>
 
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
   <header>
 
     <div class="nav">
@@ -323,30 +677,41 @@
         href="/"
         aria-label="Avelor home"
       >
+
         <img
           src="../Logo.png"
           alt="Avelor"
         >
+
       </a>
 
-      <div class="language-switch">
 
-        <button
-          type="button"
-          id="lang-en"
-          class="active"
-          onclick="setLanguage('en')"
-        >
-          EN
-        </button>
+      <div class="nav-right">
 
-        <button
-          type="button"
-          id="lang-es"
-          onclick="setLanguage('es')"
+        <div
+          class="language-switch"
+          aria-label="Language selection"
         >
-          ES
-        </button>
+
+          <button
+            type="button"
+            id="lang-en"
+            class="active"
+            onclick="setLanguage('en')"
+          >
+            EN
+          </button>
+
+
+          <button
+            type="button"
+            id="lang-es"
+            onclick="setLanguage('es')"
+          >
+            ES
+          </button>
+
+        </div>
 
       </div>
 
@@ -355,7 +720,12 @@
   </header>
 
 
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+
   <main>
+
 
     <a
       class="back-link"
@@ -372,22 +742,39 @@
 
     <div data-lang="en">
 
-      <div class="eyebrow">
-        Avelor
-      </div>
+      <div class="page-intro">
 
-      <h1>
-        Terms of Use
-      </h1>
+        <div class="eyebrow">
+          Avelor
+        </div>
 
-      <div class="updated">
-        Last updated: September 2026
+
+        <h1>
+          Terms of Use
+        </h1>
+
+
+        <div class="updated">
+          Last updated: September 2026
+        </div>
+
       </div>
 
 
       <div class="legal-section">
 
-        <h2>1. About Avelor</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            01
+          </span>
+
+          <span>
+            About Avelor
+          </span>
+
+        </h2>
+
 
         <p>
           Avelor is a growth technology platform operated from Colombia
@@ -401,7 +788,18 @@
 
       <div class="legal-section">
 
-        <h2>2. Use of the Website</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            02
+          </span>
+
+          <span>
+            Use of the Website
+          </span>
+
+        </h2>
+
 
         <p>
           You agree to use this website lawfully and responsibly. You
@@ -416,7 +814,18 @@
 
       <div class="legal-section">
 
-        <h2>3. Services</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            03
+          </span>
+
+          <span>
+            Services
+          </span>
+
+        </h2>
+
 
         <p>
           Information presented on this website is provided for general
@@ -431,7 +840,18 @@
 
       <div class="legal-section">
 
-        <h2>4. Third-Party Platforms</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            04
+          </span>
+
+          <span>
+            Third-Party Platforms
+          </span>
+
+        </h2>
+
 
         <p>
           Avelor may integrate with or rely on third-party services such
@@ -446,7 +866,18 @@
 
       <div class="legal-section">
 
-        <h2>5. Intellectual Property</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            05
+          </span>
+
+          <span>
+            Intellectual Property
+          </span>
+
+        </h2>
+
 
         <p>
           Unless otherwise indicated, the Avelor name, branding, website
@@ -461,7 +892,18 @@
 
       <div class="legal-section">
 
-        <h2>6. Availability</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            06
+          </span>
+
+          <span>
+            Availability
+          </span>
+
+        </h2>
+
 
         <p>
           We may modify, suspend, update, or discontinue parts of the
@@ -475,7 +917,18 @@
 
       <div class="legal-section">
 
-        <h2>7. Disclaimer</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            07
+          </span>
+
+          <span>
+            Disclaimer
+          </span>
+
+        </h2>
+
 
         <p>
           We aim to provide accurate and useful information, but we do
@@ -488,7 +941,18 @@
 
       <div class="legal-section">
 
-        <h2>8. Limitation of Liability</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            08
+          </span>
+
+          <span>
+            Limitation of Liability
+          </span>
+
+        </h2>
+
 
         <p>
           To the extent permitted by applicable law, Avelor and Juan
@@ -503,7 +967,18 @@
 
       <div class="legal-section">
 
-        <h2>9. Changes to These Terms</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            09
+          </span>
+
+          <span>
+            Changes to These Terms
+          </span>
+
+        </h2>
+
 
         <p>
           These Terms of Use may be updated from time to time. Updated
@@ -516,17 +991,41 @@
 
       <div class="legal-section">
 
-        <h2>10. Contact</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            10
+          </span>
+
+          <span>
+            Contact
+          </span>
+
+        </h2>
+
 
         <div class="contact-box">
 
           <p>
-            <strong>Juan Felipe Ospina Duque</strong><br>
-            Avelor<br>
-            Colombia<br>
+
+            <strong>
+              Juan Felipe Ospina Duque
+            </strong>
+
+            <br>
+
+            Avelor
+
+            <br>
+
+            Colombia
+
+            <br>
+
             <a href="mailto:studioavelor@gmail.com">
               studioavelor@gmail.com
             </a>
+
           </p>
 
         </div>
@@ -542,22 +1041,39 @@
 
     <div data-lang="es">
 
-      <div class="eyebrow">
-        Avelor
-      </div>
+      <div class="page-intro">
 
-      <h1>
-        Términos de Uso
-      </h1>
+        <div class="eyebrow">
+          Avelor
+        </div>
 
-      <div class="updated">
-        Última actualización: septiembre de 2026
+
+        <h1>
+          Términos de Uso
+        </h1>
+
+
+        <div class="updated">
+          Última actualización: septiembre de 2026
+        </div>
+
       </div>
 
 
       <div class="legal-section">
 
-        <h2>1. Sobre Avelor</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            01
+          </span>
+
+          <span>
+            Sobre Avelor
+          </span>
+
+        </h2>
+
 
         <p>
           Avelor es una plataforma de tecnología para el crecimiento
@@ -572,7 +1088,18 @@
 
       <div class="legal-section">
 
-        <h2>2. Uso del sitio web</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            02
+          </span>
+
+          <span>
+            Uso del sitio web
+          </span>
+
+        </h2>
+
 
         <p>
           El sitio web debe utilizarse de manera legal y responsable. No
@@ -587,7 +1114,18 @@
 
       <div class="legal-section">
 
-        <h2>3. Servicios</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            03
+          </span>
+
+          <span>
+            Servicios
+          </span>
+
+        </h2>
+
 
         <p>
           La información presentada en este sitio tiene fines generales
@@ -602,7 +1140,18 @@
 
       <div class="legal-section">
 
-        <h2>4. Plataformas de terceros</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            04
+          </span>
+
+          <span>
+            Plataformas de terceros
+          </span>
+
+        </h2>
+
 
         <p>
           Avelor puede integrarse con servicios de terceros relacionados
@@ -616,7 +1165,18 @@
 
       <div class="legal-section">
 
-        <h2>5. Propiedad intelectual</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            05
+          </span>
+
+          <span>
+            Propiedad intelectual
+          </span>
+
+        </h2>
+
 
         <p>
           Salvo indicación contraria, el nombre Avelor, su identidad de
@@ -632,7 +1192,18 @@
 
       <div class="legal-section">
 
-        <h2>6. Disponibilidad</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            06
+          </span>
+
+          <span>
+            Disponibilidad
+          </span>
+
+        </h2>
+
 
         <p>
           Podemos modificar, suspender, actualizar o discontinuar partes
@@ -646,7 +1217,18 @@
 
       <div class="legal-section">
 
-        <h2>7. Descargo de responsabilidad</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            07
+          </span>
+
+          <span>
+            Descargo de responsabilidad
+          </span>
+
+        </h2>
+
 
         <p>
           Buscamos proporcionar información precisa y útil, pero no
@@ -659,7 +1241,18 @@
 
       <div class="legal-section">
 
-        <h2>8. Limitación de responsabilidad</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            08
+          </span>
+
+          <span>
+            Limitación de responsabilidad
+          </span>
+
+        </h2>
+
 
         <p>
           En la medida permitida por la legislación aplicable, Avelor y
@@ -674,7 +1267,18 @@
 
       <div class="legal-section">
 
-        <h2>9. Cambios en estos términos</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            09
+          </span>
+
+          <span>
+            Cambios en estos términos
+          </span>
+
+        </h2>
+
 
         <p>
           Estos Términos de Uso pueden actualizarse periódicamente. Las
@@ -687,17 +1291,41 @@
 
       <div class="legal-section">
 
-        <h2>10. Contacto</h2>
+        <h2 class="section-heading">
+
+          <span class="section-number">
+            10
+          </span>
+
+          <span>
+            Contacto
+          </span>
+
+        </h2>
+
 
         <div class="contact-box">
 
           <p>
-            <strong>Juan Felipe Ospina Duque</strong><br>
-            Avelor<br>
-            Colombia<br>
+
+            <strong>
+              Juan Felipe Ospina Duque
+            </strong>
+
+            <br>
+
+            Avelor
+
+            <br>
+
+            Colombia
+
+            <br>
+
             <a href="mailto:studioavelor@gmail.com">
               studioavelor@gmail.com
             </a>
+
           </p>
 
         </div>
@@ -723,8 +1351,13 @@
 
     </div>
 
+
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
 
@@ -749,11 +1382,16 @@
   </footer>
 
 
+  <!-- =========================
+       LANGUAGE SCRIPT
+  ========================== -->
+
   <script>
 
     function setLanguage(lang) {
 
       document.documentElement.lang = lang;
+
 
       document.querySelectorAll('[data-lang]').forEach(element => {
 
@@ -764,11 +1402,14 @@
 
       });
 
+
       document.getElementById('lang-en')
         .classList.toggle('active', lang === 'en');
 
+
       document.getElementById('lang-es')
         .classList.toggle('active', lang === 'es');
+
 
       localStorage.setItem('avelor-language', lang);
 
@@ -778,9 +1419,11 @@
     const savedLanguage =
       localStorage.getItem('avelor-language') || 'en';
 
+
     setLanguage(savedLanguage);
 
   </script>
+
 
 </body>
 
